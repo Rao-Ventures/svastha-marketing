@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFCC00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9D00;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.25" flood-color="#8B7500"/>
+    </filter>
+    <radialGradient id="bgGradient">
+      <stop offset="0%" style="stop-color:#FFFEF8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFF9E6;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Circle background for OM -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#goldGradient)" stroke-width="3" opacity="0.3"/>
+  
+  <!-- OM Symbol (ॐ) -->
+  <text x="256" y="340" 
+        font-family="Arial, Noto Sans, sans-serif" 
+        font-size="280" 
+        font-weight="bold"
+        text-anchor="middle" 
+        fill="url(#goldGradient)"
+        filter="url(#shadow)"
+        stroke="#B8860B" 
+        stroke-width="3"
+        paint-order="stroke">ॐ</text>
+</svg>
