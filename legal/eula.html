@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Svastha — EULA</title>
+  <meta name="description"
+    content="Svastha is your companion for exploring Hindu scriptures, deepening spiritual practice, and cultivating a lifestyle of total wellness." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ── Design Tokens ─────────────────────────────────────────── */
+    :root {
+      --gold: #B8860B;
+      --gold-light: #D4A843;
+      --gold-dark: #8B6914;
+      --gold-pale: #F5ECD0;
+      --cream: #FDFBF7;
+      --cream-dark: #F0E9DC;
+      --surface: #FFFFFF;
+      --text: #2C2C2C;
+      --text-sec: #6B6B6B;
+      --text-tert: #9E9E9E;
+      --border: #E8E2D6;
+      --accent: #C4956A;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 32px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.06);
+      --shadow-gold: 0 4px 24px rgba(184, 134, 11, 0.25);
+
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ── Reset & Base ──────────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .serif {
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    /* ── Nav ───────────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 251, 247, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .nav-om {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-sec);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+      background: var(--gold-pale);
+    }
+
+    .nav-cta {
+      background: var(--gold) !important;
+      color: #fff !important;
+      padding: 8px 20px !important;
+      border-radius: var(--radius-full) !important;
+      font-weight: 600 !important;
+      transition: background var(--transition), box-shadow var(--transition) !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-dark) !important;
+      box-shadow: var(--shadow-gold) !important;
+    }
+
+    /* ── Content Layout ────────────────────────────────────────── */
+    .legal-content {
+      max-width: 800px;
+      margin: 60px auto;
+      background: var(--surface);
+      padding: 48px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .legal-content h1 {
+      font-size: 2.7rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 24px;
+      line-height: 1.15;
+    }
+
+    .legal-content h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 40px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    .legal-content h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    .legal-content p {
+      margin-bottom: 16px;
+      color: var(--text-sec);
+    }
+
+    .legal-content strong {
+      color: var(--text);
+    }
+
+    .legal-content hr {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+
+    .legal-content ul {
+      margin-bottom: 24px;
+      padding-left: 20px;
+      color: var(--text-sec);
+    }
+
+    .legal-content li {
+      margin-bottom: 8px;
+    }
+
+    /* Table styles */
+    .table-container {
+      overflow-x: auto;
+      margin: 24px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th,
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--cream);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ── Footer ────────────────────────────────────────────────── */
+    footer {
+      background: #1C1810;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 48px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+    }
+
+    .footer-brand img {
+      width: 32px;
+      opacity: 0.9;
+    }
+
+    .footer-tagline {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.4);
+      max-width: 240px;
+    }
+
+    .footer-links h5 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 14px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 36px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.5);
+      transition: color var(--transition);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gold-light);
+    }
+
+    /* ── Twitter / X icon ──────────────────────────────────────── */
+    .social-x {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.875rem;
+      transition: color var(--transition);
+    }
+
+    .social-x:hover {
+      color: var(--gold-light);
+    }
+
+    .social-x svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ── Responsive ────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .legal-content {
+        padding: 24px;
+        margin: 30px 16px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ───────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="../index.html" aria-label="Svastha home">
+        <img class="nav-om" src="../om-symbol.svg" alt="" aria-hidden="true" />
+        Svastha
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#features">Features</a></li>
+        <li><a href="../index.html#scriptures">Library</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li>
+          <a href="../index.html#download" class="nav-cta" id="nav-download-btn">Download</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Main Content ─────────────────────────────────────────── -->
+  <main class="container">
+    <article class="legal-content">
+      <h1 class="serif">End User License Agreement (EULA)</h1>
+
+      <p><strong>Effective Date</strong>: June 15, 2026 </p>
+      <p><strong>Company</strong>: Rao Ventures LLC </p>
+      <p><strong>Contact</strong>: contact@raoventures.net</p>
+
+      <hr />
+
+      <h2 class="serif">1. License Grant</h2>
+
+      <p>Rao Ventures LLC ("Company," "Licensor," "we," "us," or "Svastha") grants you a <strong>limited, non-exclusive,
+          non-transferable, revocable license</strong> to download, install, and use the Svastha mobile application (the
+        "App") on compatible devices that you own or control, solely for personal, non-commercial use in accordance with
+        this EULA.</p>
+
+      <p>This license does not include the right to:</p>
+      <ul>
+        <li>Modify, adapt, translate, or create derivative works from the App</li>
+      </ul>
+      <ul>
+        <li>Decompile, reverse-engineer, disassemble, or attempt to derive the source code</li>
+      </ul>
+      <ul>
+        <li>Remove, obscure, or alter any proprietary notices, labels, or marks</li>
+      </ul>
+      <ul>
+        <li>Sublicense, rent, lease, loan, or resell the App</li>
+      </ul>
+      <ul>
+        <li>Use the App for commercial purposes or in a service bureau capacity</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="serif">2. Permitted Use</h2>
+
+      <p>You may:</p>
+      <ul>
+        <li>Install and use the App on your personal device(s)</li>
+      </ul>
+      <ul>
+        <li>Access content for personal, educational, and spiritual purposes</li>
+      </ul>
+      <ul>
+        <li>Sync data across your own devices via Supabase cloud services</li>
+      </ul>
+      <ul>
+        <li>Access offline features after downloading scripture content</li>
+      </ul>
+      <ul>
+        <li>Create personal notes, reflections, and bookmarks for your own use</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="serif">3. Prohibited Use</h2>
+
+      <p>You may not:</p>
+      <ul>
+        <li>Use the App to develop, market, or distribute competing applications</li>
+      </ul>
+      <ul>
+        <li>Access the App through automated means (scripts, bots, scrapers) without authorization</li>
+      </ul>
+      <ul>
+        <li>Attempt to gain unauthorized access to the App, servers, or other users' accounts</li>
+      </ul>
+      <ul>
+        <li>Transmit viruses, malware, or any code of destructive nature</li>
+      </ul>
+      <ul>
+        <li>Interfere with the operation of the App or its infrastructure</li>
+      </ul>
+      <ul>
+        <li>Use the App for any unlawful purpose or in violation of applicable law</li>
+      </ul>
+      <ul>
+        <li>Sell, trade, or gift your account or access credentials</li>
+      </ul>
+      <ul>
+        <li>Access the App from restricted jurisdictions where prohibited by law</li>
+      </ul>
+      <ul>
+        <li>Use the App while wearing or while operating any distracted device (if driving or operating machinery)</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="serif">4. Intellectual Property Rights</h2>
+
+      <h3 class="serif">4.1 Ownership</h3>
+
+      <p>All content within the App, including but not limited to:</p>
+      <ul>
+        <li>Source code and compiled software</li>
+      </ul>
+      <ul>
+        <li>Scripture texts and translations (excluding public domain materials)</li>
+      </ul>
+      <ul>
+        <li>Design, graphics, layouts, and user interface</li>
+      </ul>
+      <ul>
+        <li>Logos, trademarks, and service marks</li>
+      </ul>
+      <ul>
+        <li>Photographs, videos, and audio content</li>
+      </ul>
+      <ul>
+        <li>Algorithms, databases, and documentation</li>
+      </ul>
+
+      <p>are owned by or licensed to Rao Ventures LLC and are protected by copyright, trademark, patent, and other
+        intellectual property laws.</p>
+
+      <h3 class="serif">4.2 Public Domain Content</h3>
+
+      <p>Certain scripture texts (e.g., Upanishads in certain translations) may be in the public domain. This EULA does
+        not restrict your use of such public domain materials beyond the scope of the App itself.</p>
+
+      <h3 class="serif">4.3 Third-Party Licenses</h3>
+
+      <p>The App incorporates third-party open-source libraries and components. See Section 9 for a complete list of
+        third-party licenses.</p>
+
+      <hr />
+
+      <h2 class="serif">5. App Store Terms</h2>
+
+      <h3 class="serif">5.1 Apple App Store</h3>
+
+      <p>By downloading the App from the Apple App Store, you acknowledge:</p>
+      <ul>
+        <li>This EULA is between you and Rao Ventures LLC, not Apple</li>
+      </ul>
+      <ul>
+        <li>Apple is not responsible for the App, its content, or updates</li>
+      </ul>
+      <ul>
+        <li>Apple has no obligation to provide support or handle disputes</li>
+      </ul>
+      <ul>
+        <li>Apple may remove the App from the App Store at any time</li>
+      </ul>
+      <ul>
+        <li>Your use is subject to Apple's [App Store Terms of
+          Service](https://www.apple.com/legal/internet-services/itunes/us/terms.html)</li>
+      </ul>
+
+      <h3 class="serif">5.2 Google Play Store</h3>
+
+      <p>By downloading the App from Google Play, you acknowledge:</p>
+      <ul>
+        <li>This EULA is between you and Rao Ventures LLC, not Google</li>
+      </ul>
+      <ul>
+        <li>Google is not responsible for the App, its content, or updates</li>
+      </ul>
+      <ul>
+        <li>Google has no obligation to provide support or handle disputes</li>
+      </ul>
+      <ul>
+        <li>Google may remove the App from Google Play at any time</li>
+      </ul>
+      <ul>
+        <li>Your use is subject to Google's [Play Store Terms of Service](https://play.google.com/about/play-terms.html)
+        </li>
+      </ul>
+
+      <h3 class="serif">5.3 App Store Compliance</h3>
+
+      <p>The App complies with app store guidelines including:</p>
+      <ul>
+        <li>Age restrictions (13+)</li>
+      </ul>
+      <ul>
+        <li>Content ratings and categorization</li>
+      </ul>
+      <ul>
+        <li>Auto-renewal and billing transparency (for subscriptions)</li>
+      </ul>
+      <ul>
+        <li>Privacy and security requirements</li>
+      </ul>
+      <ul>
+        <li>Health and wellness claim disclaimers</li>
+      </ul>
+
+      <p>If you purchase a subscription through the Apple App Store or Google Play Store, that purchase is governed by
+        the store's terms. Subscription management (including cancellations, renewals, and refunds) for in-app purchases
+        must be handled through your Apple ID or Google account settings.</p>
+
+      <hr />
+
+      <h2 class="serif">6. Updates & Modifications</h2>
+
+      <h3 class="serif">6.1 Automatic Updates</h3>
+
+      <p>We may provide updates, patches, bug fixes, or new versions of the App. You agree to install and use the
+        current version. Updates may:</p>
+      <ul>
+        <li>Add or remove features</li>
+      </ul>
+      <ul>
+        <li>Change the user interface</li>
+      </ul>
+      <ul>
+        <li>Modify subscription availability</li>
+      </ul>
+      <ul>
+        <li>Patch security vulnerabilities</li>
+      </ul>
+
+      <h3 class="serif">6.2 Mandatory Updates</h3>
+
+      <p>We may require that you update to the latest version to continue using certain features or to maintain
+        security. Failure to update may result in loss of functionality.</p>
+
+      <h3 class="serif">6.3 Service Modifications</h3>
+
+      <p>We reserve the right to modify, suspend, or discontinue the App or any feature at any time without liability,
+        though we will provide reasonable notice for material changes.</p>
+
+      <hr />
+
+      <h2 class="serif">7. Disclaimers & Warranties</h2>
+
+      <h3 class="serif">7.1 "AS-IS" Disclaimer</h3>
+
+      <p><strong>THE APP AND ALL CONTENT ARE PROVIDED ON AN "AS-IS" AND "AS-AVAILABLE" BASIS.</strong> TO THE FULLEST
+        EXTENT PERMITTED BY LAW, Rao Ventures LLC DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING:</p>
+      <ul>
+        <li>Warranty of merchantability</li>
+      </ul>
+      <ul>
+        <li>Warranty of fitness for a particular purpose</li>
+      </ul>
+      <ul>
+        <li>Warranty of title or non-infringement</li>
+      </ul>
+      <ul>
+        <li>Warranty of accuracy, completeness, or reliability</li>
+      </ul>
+      <ul>
+        <li>Warranty of uninterrupted or error-free operation</li>
+      </ul>
+
+      <h3 class="serif">7.2 No Guarantees</h3>
+
+      <p>We do not guarantee that:</p>
+      <ul>
+        <li>The App will meet your requirements</li>
+      </ul>
+      <ul>
+        <li>The App will operate uninterrupted or error-free</li>
+      </ul>
+      <ul>
+        <li>Bugs or defects will be corrected</li>
+      </ul>
+      <ul>
+        <li>The App will remain available at all times</li>
+      </ul>
+      <ul>
+        <li>Data will not be lost or corrupted</li>
+      </ul>
+      <ul>
+        <li>Third-party integrations (Supabase, RevenueCat, Google Gemini, OpenAI) will remain available</li>
+      </ul>
+
+      <h3 class="serif">7.3 Health Disclaimers</h3>
+      <ul>
+        <li>The App is NOT a substitute for professional medical advice or treatment</li>
+      </ul>
+      <ul>
+        <li>Wellness and scripture study information is provided for educational purposes only</li>
+      </ul>
+      <ul>
+        <li>If you have health concerns, consult a qualified healthcare provider</li>
+      </ul>
+      <ul>
+        <li>Svastha does not diagnose, treat, cure, or prevent any disease or medical condition</li>
+      </ul>
+
+      <h3 class="serif">7.4 Third-Party Services</h3>
+
+      <p>We are not responsible for:</p>
+      <ul>
+        <li>Outages or failures of Supabase, Google Gemini, OpenAI, or RevenueCat</li>
+      </ul>
+      <ul>
+        <li>Data breaches or security incidents at third-party services</li>
+      </ul>
+      <ul>
+        <li>Accuracy or completeness of data from third-party sources</li>
+      </ul>
+      <ul>
+        <li>Compliance of third-party services with your privacy expectations</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="serif">8. Limitation of Liability</h2>
+
+      <h3 class="serif">8.1 Limitation Cap</h3>
+
+      <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW, Rao Ventures LLC SHALL NOT BE LIABLE FOR ANY INDIRECT,
+          INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES</strong>, including:</p>
+      <ul>
+        <li>Loss of profits or revenue</li>
+      </ul>
+      <ul>
+        <li>Loss of data or information</li>
+      </ul>
+      <ul>
+        <li>Loss of access to the App</li>
+      </ul>
+      <ul>
+        <li>Health complications or adverse effects</li>
+      </ul>
+      <ul>
+        <li>Damage to your device</li>
+      </ul>
+      <ul>
+        <li>Business interruption or downtime</li>
+      </ul>
+
+      <p>even if the Company has been advised of the possibility of such damages.</p>
+
+      <h3 class="serif">8.2 Maximum Liability</h3>
+
+      <p>In no event shall Rao Ventures LLC's total liability exceed the lesser of:</p>
+      <ul>
+        <li>The amount you paid for the App in the 12 months preceding the claim, or</li>
+      </ul>
+      <ul>
+        <li>USD $100 (or your local currency equivalent)</li>
+      </ul>
+
+      <h3 class="serif">8.3 Exceptions</h3>
+
+      <p>Some jurisdictions do not permit limitation of liability for certain claims. This section applies only to the
+        extent permitted by applicable law.</p>
+
+      <hr />
+
+      <h2 class="serif">9. Third-Party Licenses & Acknowledgments</h2>
+
+      <p>The Svastha App includes the following open-source and third-party components:</p>
+
+      <h3 class="serif">9.1 React Native & React</h3>
+      <ul>
+        <li><strong>License</strong>: MIT License</li>
+      </ul>
+      <ul>
+        <li><strong>Repository</strong>:
+          [https://github.com/facebook/react-native](https://github.com/facebook/react-native)</li>
+      </ul>
+      <ul>
+        <li><strong>Copyright</strong>: Meta Platforms, Inc.</li>
+      </ul>
+
+      <h3 class="serif">9.2 Expo</h3>
+      <ul>
+        <li><strong>License</strong>: MIT License</li>
+      </ul>
+      <ul>
+        <li><strong>Repository</strong>: [https://github.com/expo/expo](https://github.com/expo/expo)</li>
+      </ul>
+      <ul>
+        <li><strong>Copyright</strong>: Expo Contributors</li>
+      </ul>
+
+      <h3 class="serif">9.3 Supabase JavaScript Client</h3>
+      <ul>
+        <li><strong>License</strong>: Apache 2.0</li>
+      </ul>
+      <ul>
+        <li><strong>Repository</strong>:
+          [https://github.com/supabase/supabase-js](https://github.com/supabase/supabase-js)</li>
+      </ul>
+      <ul>
+        <li><strong>Copyright</strong>: Supabase</li>
+      </ul>
+
+      <h3 class="serif">9.4 React Navigation</h3>
+      <ul>
+        <li><strong>License</strong>: MIT License</li>
+      </ul>
+      <ul>
+        <li><strong>Repository</strong>:
+          [https://github.com/react-navigation/react-navigation](https://github.com/react-navigation/react-navigation)
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Copyright</strong>: React Navigation Contributors</li>
+      </ul>
+
+      <h3 class="serif">9.5 Lucide React Native</h3>
+      <ul>
+        <li><strong>License</strong>: ISC License</li>
+      </ul>
+      <ul>
+        <li><strong>Repository</strong>:
+          [https://github.com/lucide-icons/lucide](https://github.com/lucide-icons/lucide)</li>
+      </ul>
+      <ul>
+        <li><strong>Copyright</strong>: Lucide Contributors</li>
+      </ul>
+
+      <h3 class="serif">9.6 AsyncStorage</h3>
+      <ul>
+        <li><strong>License</strong>: MIT License</li>
+      </ul>
+      <ul>
+        <li><strong>Repository</strong>:
+          [https://github.com/react-native-async-storage/async-storage](https://github.com/react-native-async-storage/async-storage)
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Copyright</strong>: React Community</li>
+      </ul>
+
+      <h3 class="serif">9.7 Expo Notifications</h3>
+      <ul>
+        <li><strong>License</strong>: MIT License</li>
+      </ul>
+      <ul>
+        <li><strong>Repository</strong>: [https://github.com/expo/expo](https://github.com/expo/expo)</li>
+      </ul>
+      <ul>
+        <li><strong>Copyright</strong>: Expo Contributors</li>
+      </ul>
+
+      <h3 class="serif">9.8 Other Third-Party Services</h3>
+      <ul>
+        <li><strong>Google Gemini API</strong>: Proprietary (Google); terms of service apply</li>
+      </ul>
+      <ul>
+        <li><strong>Google Play Services</strong>: Proprietary (Google); licensing terms apply</li>
+      </ul>
+      <ul>
+        <li><strong>RevenueCat SDK</strong>: Proprietary (RevenueCat, Inc.); terms of service apply</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="serif">10. User Responsibility & Indemnification</h2>
+
+      <h3 class="serif">10.1 User Responsibility</h3>
+
+      <p>You are solely responsible for:</p>
+      <ul>
+        <li>Your use of the App and compliance with this EULA</li>
+      </ul>
+      <ul>
+        <li>Maintaining backups of important personal data</li>
+      </ul>
+      <ul>
+        <li>Investigating whether the App meets your requirements before use</li>
+      </ul>
+      <ul>
+        <li>Reporting bugs, security issues, or prohibited conduct</li>
+      </ul>
+
+      <h3 class="serif">10.2 Indemnification</h3>
+
+      <p>You agree to indemnify, defend, and hold harmless Rao Ventures LLC, its affiliates, officers, directors, and
+        employees from any claims, damages, losses, liabilities, and expenses (including attorneys' fees) arising from:
+      </p>
+      <ul>
+        <li>Your use of the App in violation of this EULA</li>
+      </ul>
+      <ul>
+        <li>Your violation of applicable law</li>
+      </ul>
+      <ul>
+        <li>Your infringement of third-party intellectual property rights</li>
+      </ul>
+      <ul>
+        <li>Your user-generated content or activity</li>
+      </ul>
+      <ul>
+        <li>Health complications or adverse effects from using the App</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="serif">11. Privacy & Data Protection</h2>
+
+      <p>Your use of the App is governed by our Privacy Policy, which describes how we collect, use, and share your
+        information. By using the App, you consent to our privacy practices as described in the Privacy Policy.</p>
+
+      <hr />
+
+      <h2 class="serif">12. Termination</h2>
+
+      <h3 class="serif">12.1 Termination by You</h3>
+
+      <p>You may terminate this license at any time by uninstalling the App and discontinuing use.</p>
+
+      <h3 class="serif">12.2 Termination by Company</h3>
+
+      <p>We may terminate this license and your access to the App if:</p>
+      <ul>
+        <li>You breach this EULA or our Terms of Service</li>
+      </ul>
+      <ul>
+        <li>You engage in prohibited conduct</li>
+      </ul>
+      <ul>
+        <li>Your account is used for unlawful purposes</li>
+      </ul>
+      <ul>
+        <li>We discontinue the App or your account</li>
+      </ul>
+
+      <h3 class="serif">12.3 Effect of Termination</h3>
+
+      <p>Upon termination:</p>
+      <ul>
+        <li>Your license to use the App is immediately revoked</li>
+      </ul>
+      <ul>
+        <li>You must uninstall the App</li>
+      </ul>
+      <ul>
+        <li>We may delete your account and associated data within 30 days</li>
+      </ul>
+      <ul>
+        <li>Sections 4, 7, 8, 10, and 11 (and other provisions that logically survive) remain in effect</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="serif">13. Governing Law & Dispute Resolution</h2>
+
+      <p>This EULA is governed by the laws of <strong>Texas, USA, without regard to its conflict of law
+          principles</strong>.</p>
+
+      <p>Any dispute shall be resolved by <strong>binding arbitration</strong> (except for injunctive relief),
+        administered by <strong>the American Arbitration Association (AAA)</strong>, in accordance with its rules, with
+        proceedings conducted in English.</p>
+
+      <p><strong>Class Action Waiver</strong>: You may not pursue claims as a class action, collective action, or
+        representative action. All disputes must be resolved individually.</p>
+
+      <hr />
+
+      <h2 class="serif">14. Severability</h2>
+
+      <p>If any provision of this EULA is found to be invalid or unenforceable, that provision shall be modified to the
+        minimum extent necessary to make it enforceable, or if not possible, severed. The remaining provisions shall
+        continue in full force and effect.</p>
+
+      <hr />
+
+      <h2 class="serif">15. Entire Agreement</h2>
+
+      <p>This EULA, together with our Terms of Service and Privacy Policy, constitutes the entire agreement between you
+        and Rao Ventures LLC regarding the App and supersedes all prior and concurrent agreements, representations, and
+        understandings, whether written or oral.</p>
+
+      <hr />
+
+      <h2 class="serif">16. Contact Information</h2>
+
+      <p>For questions, support, or to report violations of this EULA:</p>
+      <ul>
+        <li><strong>Email</strong>: contact@raoventures.net</li>
+      </ul>
+      <ul>
+        <li><strong>Support Portal</strong>: https://raoventures.net/support</li>
+      </ul>
+      <ul>
+        <li><strong>Mailing Address</strong>: 5900 Balcones Drive Ste 100, Austin TX 78731, USA</li>
+      </ul>
+      <ul>
+        <li><strong>Phone</strong>: +1 (737) 434-0575</li>
+      </ul>
+
+      <p>We will respond to inquiries within <strong>7-14 business days</strong>.</p>
+
+      <hr />
+
+      <h2 class="serif">17. Changes to This EULA</h2>
+
+      <p>We may update this EULA periodically. We will notify you of material changes by:</p>
+
+      <p>1. Updating the "Last Updated" date</p>
+      <p>2. Posting the revised EULA in the App</p>
+      <p>3. Requesting explicit acceptance for material changes (if applicable)</p>
+
+      <p>Your continued use of the App signifies acceptance of the revised EULA. If you do not agree with changes, you
+        may delete your account and uninstall the App.</p>
+
+      <hr />
+
+      <p><strong>Effective Date</strong>: June 15, 2026</p>
+
+    </article>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="../om-symbol.svg" alt="" aria-hidden="true" />
+          Svastha
+        </div>
+        <p class="footer-tagline">Ancient wisdom for modern life. A companion for your spiritual journey.</p>
+      </div>
+
+      <div class="footer-links">
+        <h5>App</h5>
+        <ul>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../index.html#scriptures">Scripture Library</a></li>
+          <li><a href="../index.html#download">Download</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="https://raoventures.net" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
+          <li><a href="mailto:contact@raoventures.net">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="eula.html">EULA</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Rao Ventures LLC. All rights reserved.</span>
+      <a href="https://x.com/rao_ventures" target="_blank" rel="noopener" class="social-x"
+        aria-label="Follow on X / Twitter">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.258 5.632 5.906-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+        @rao_ventures
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

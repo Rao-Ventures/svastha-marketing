@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Svastha — Privacy Policy</title>
+  <meta name="description" content="Svastha is your companion for exploring Hindu scriptures, deepening spiritual practice, and cultivating a lifestyle of total wellness." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ── Design Tokens ─────────────────────────────────────────── */
+    :root {
+      --gold: #B8860B;
+      --gold-light: #D4A843;
+      --gold-dark: #8B6914;
+      --gold-pale: #F5ECD0;
+      --cream: #FDFBF7;
+      --cream-dark: #F0E9DC;
+      --surface: #FFFFFF;
+      --text: #2C2C2C;
+      --text-sec: #6B6B6B;
+      --text-tert: #9E9E9E;
+      --border: #E8E2D6;
+      --accent: #C4956A;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 32px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.06);
+      --shadow-gold: 0 4px 24px rgba(184, 134, 11, 0.25);
+
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ── Reset & Base ──────────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .serif {
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    /* ── Nav ───────────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 251, 247, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .nav-om {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-sec);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+      background: var(--gold-pale);
+    }
+
+    .nav-cta {
+      background: var(--gold) !important;
+      color: #fff !important;
+      padding: 8px 20px !important;
+      border-radius: var(--radius-full) !important;
+      font-weight: 600 !important;
+      transition: background var(--transition), box-shadow var(--transition) !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-dark) !important;
+      box-shadow: var(--shadow-gold) !important;
+    }
+
+    /* ── Content Layout ────────────────────────────────────────── */
+    .legal-content {
+      max-width: 800px;
+      margin: 60px auto;
+      background: var(--surface);
+      padding: 48px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .legal-content h1 {
+      font-size: 2.7rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 24px;
+      line-height: 1.15;
+    }
+
+    .legal-content h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 40px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    .legal-content h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    .legal-content p {
+      margin-bottom: 16px;
+      color: var(--text-sec);
+    }
+
+    .legal-content strong {
+      color: var(--text);
+    }
+
+    .legal-content hr {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+
+    .legal-content ul {
+      margin-bottom: 24px;
+      padding-left: 20px;
+      color: var(--text-sec);
+    }
+
+    .legal-content li {
+      margin-bottom: 8px;
+    }
+
+    /* Table styles */
+    .table-container {
+      overflow-x: auto;
+      margin: 24px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--cream);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ── Footer ────────────────────────────────────────────────── */
+    footer {
+      background: #1C1810;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 48px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+    }
+
+    .footer-brand img {
+      width: 32px;
+      opacity: 0.9;
+    }
+
+    .footer-tagline {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.4);
+      max-width: 240px;
+    }
+
+    .footer-links h5 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 14px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 36px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.5);
+      transition: color var(--transition);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gold-light);
+    }
+
+    /* ── Twitter / X icon ──────────────────────────────────────── */
+    .social-x {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.875rem;
+      transition: color var(--transition);
+    }
+
+    .social-x:hover {
+      color: var(--gold-light);
+    }
+
+    .social-x svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ── Responsive ────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .legal-content {
+        padding: 24px;
+        margin: 30px 16px;
+      }
+      .footer-inner {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ───────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="../index.html" aria-label="Svastha home">
+        <img class="nav-om" src="../om-symbol.svg" alt="" aria-hidden="true" />
+        Svastha
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#features">Features</a></li>
+        <li><a href="../index.html#scriptures">Library</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li>
+          <a href="../index.html#download" class="nav-cta" id="nav-download-btn">Download</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Main Content ─────────────────────────────────────────── -->
+  <main class="container">
+    <article class="legal-content">
+      <h1 class="serif">Privacy Policy</h1>
+
+<p><strong>Effective Date</strong>: June 15, 2026  </p>
+<p><strong>Company</strong>: Rao Ventures LLC  </p>
+<p><strong>Privacy Contact</strong>: contact@raoventures.net</p>
+
+<hr />
+
+<h2 class="serif">1. Introduction</h2>
+
+<p>This Privacy Policy explains how Rao Ventures LLC ("Company," "we," "us," or "our") collects, uses, shares, stores, and protects information when you use the Svastha app, including scripture-learning, yoga, and reflection features.</p>
+
+<p>Svastha may allow you to record personal reflections, spiritual practices, progress notes, and yoga activity. Some of that information can reveal sensitive details about your beliefs, habits, or health-related routines. We treat that information carefully and use it only for the purposes described in this Policy.</p>
+
+<p>By using Svastha, you agree to this Policy. If you do not agree, please do not use the app.</p>
+
+<hr />
+
+<h2 class="serif">2. Information We Collect</h2>
+
+<p>We collect only the information needed to provide and improve the app.</p>
+
+<h3 class="serif">2.1 Information You Give Us</h3>
+<ul>
+<li>Account details such as your name, email address, and password</li></ul>
+<ul>
+<li>Profile details you choose to add, such as preferences or display name</li></ul>
+<ul>
+<li>Reflections, prayer notes, scripture notes, and yoga progress</li></ul>
+<ul>
+<li>Support messages, feedback, and bug reports</li></ul>
+<ul>
+<li>Subscription and billing details if you buy a paid plan</li></ul>
+
+<p>Some of this information is optional. If you choose not to provide it, some features may not work.</p>
+
+<h3 class="serif">2.2 Sensitive Data</h3>
+
+<p>Depending on how you use the app, your content may include sensitive information such as:</p>
+<ul>
+<li>Religious or spiritual beliefs</li></ul>
+<ul>
+<li>Prayer habits</li></ul>
+<ul>
+<li>Mood, wellness, or health-related notes</li></ul>
+<ul>
+<li>Yoga or movement history</li></ul>
+<ul>
+<li>Other wellness or routine information you choose to record in the app</li></ul>
+
+<p>We do not use sensitive data for advertising. We use it only to provide the features you asked for, improve the apps, protect security, and meet legal requirements.</p>
+
+<h3 class="serif">2.3 Information Collected Automatically</h3>
+
+<p>When you use the apps, we may collect:</p>
+<ul>
+<li>Device type, operating system, app version, and language settings</li></ul>
+<ul>
+<li>IP address and approximate location based on network information</li></ul>
+<ul>
+<li>App usage details such as screens viewed, features used, session length, and crash reports</li></ul>
+<ul>
+<li>Push notification tokens if you allow notifications</li></ul>
+<ul>
+<li>Analytics or performance data if those features are enabled</li></ul>
+
+<h3 class="serif">2.4 Information From Third Parties</h3>
+
+<p>We may receive information from service providers that help run the app, including:</p>
+<ul>
+<li><strong>Supabase</strong> for authentication and app data storage</li></ul>
+<ul>
+<li><strong>Apple App Store and Google Play</strong> for subscription and payment processing</li></ul>
+<ul>
+<li><strong>Google Gemini</strong> and <strong>OpenAI</strong> for AI-powered features</li></ul>
+<ul>
+<li><strong>RevenueCat</strong> for subscription management and entitlement syncing</li></ul>
+<ul>
+<li><strong>App stores</strong> for purchase confirmation, receipt validation, or download metadata</li></ul>
+
+<p>We do not store or process payment card details directly. Payment processing is handled by Apple and Google according to their respective app store policies. We may receive and retain limited billing information such as:</p>
+<ul>
+<li>Billing email and name</li></ul>
+<ul>
+<li>Receipt identifiers and transaction dates</li></ul>
+<ul>
+<li>Subscription status and plan identifiers</li></ul>
+
+<p>These records are retained for accounting, fraud prevention, and legal compliance.</p>
+
+<h3 class="serif">2.5 Sign in with Apple, Google, and Email/Password</h3>
+<ul>
+<li>If you use "Sign in with Apple", Apple may provide us with the name and email address associated with your Apple ID. Apple also offers a private relay (a proxy) email option that hides your real email; if you choose that option, we will receive and store the proxy address Apple provides.</li></ul>
+<ul>
+<li>If you use Google sign-in, Google may provide us with your name, email address, and profile information associated with your Google account.</li></ul>
+<ul>
+<li>We use third-party sign-in information only to create and manage your account, link it to any existing data, and communicate about your account when necessary (for example, account notifications or support messages). We do not use third-party sign-in information for advertising.</li></ul>
+<ul>
+<li>You can manage your Google account access through your Google account settings. Deleting or revoking access from Apple or Google does not automatically delete your Svastha account — please follow the account deletion steps below if you want your account removed from our service.</li></ul>
+
+<h3 class="serif">2.6 Email and Password Accounts</h3>
+<ul>
+<li>If you create an account with an email address and password, we collect and use your email address to authenticate you, send account-related messages, and help with password resets.</li></ul>
+<ul>
+<li>Passwords are handled through our authentication provider and are not stored or shared in plaintext.</li></ul>
+<ul>
+<li>We use email/password account information only for account access, security, and support purposes.</li></ul>
+
+<hr />
+
+<h2 class="serif">3. How We Collect Information</h2>
+
+<p>We collect information in three main ways:</p>
+
+<h3 class="serif">3.1 Directly From You</h3>
+
+<p>You provide information when you create an account, write reflections, save yoga progress, contact support, or buy a subscription.</p>
+
+<h3 class="serif">3.2 Automatically</h3>
+
+<p>We collect certain technical and usage information when you open or use the apps.</p>
+
+<h3 class="serif">3.3 From Service Providers</h3>
+
+<p>We may receive limited information from providers that help us authenticate users, process payments, or deliver notifications.</p>
+
+<hr />
+
+<h2 class="serif">4. How We Use Information</h2>
+
+<p>We use information to:</p>
+<ul>
+<li>Provide core app features such as scripture study, yoga guidance, reflections, and progress tracking</li></ul>
+<ul>
+<li>Save your settings, preferences, history, and content across devices when syncing is enabled</li></ul>
+<ul>
+<li>Personalize your experience and show your own saved content back to you</li></ul>
+<ul>
+<li>Process subscriptions, payments, and refunds</li></ul>
+<ul>
+<li>Send service messages, security notices, and updates</li></ul>
+<ul>
+<li>Fix bugs, improve performance, and understand which features are useful</li></ul>
+<ul>
+<li>Detect fraud, prevent abuse, and keep accounts secure</li></ul>
+<ul>
+<li>Comply with legal obligations</li></ul>
+
+<p>We do not sell your personal data. We do not use your reflections or spiritual content for targeted advertising.</p>
+
+<hr />
+
+<h2 class="serif">5. Sharing or Selling Data</h2>
+
+<h3 class="serif">5.1 We Do Not Sell Personal Data</h3>
+
+<p>We do not sell your personal information.</p>
+
+<h3 class="serif">5.2 We Share Data Only When Needed</h3>
+
+<p>We may share information with service providers that help us run the apps. These providers are only allowed to use the data to perform services for us.</p>
+
+<p>Typical providers include:</p>
+
+<div class="table-container"><table>
+<tr><td>Service</td><td>Why We Use It</td><td>Data Shared</td></tr>
+
+<tr><td><strong>Supabase</strong></td><td>Authentication, storage, and app database services</td><td>Email, account data, app content</td></tr>
+<tr><td><strong>RevenueCat</strong></td><td>Subscription and entitlement management</td><td>Billing status, subscription state</td></tr>
+<tr><td><strong>Google Gemini</strong></td><td>Optional AI features</td><td>The text you submit for that feature</td></tr>
+<tr><td><strong>OpenAI</strong></td><td>Verse search query embeddings</td><td>The text you submit for search</td></tr>
+<tr><td><strong>Expo Notifications</strong></td><td>Push notifications</td><td>Device notification tokens</td></tr>
+
+</table></div><h3 class="serif">5.3 Legal Reasons and Business Changes</h3>
+
+<p>We may share information if required by law, court order, or government request. We may also share information during a merger, acquisition, or sale of the business if the receiving party agrees to handle it in line with this Policy.</p>
+
+<h3 class="serif">5.4 No Advertising Sharing by Default</h3>
+
+<p>We do not share your reflections or other spiritual content with advertisers. If we ever change that, we will update this Policy and, where required, ask for your consent first.</p>
+
+<hr />
+
+<h2 class="serif">6. Data Storage & Security</h2>
+
+<h3 class="serif">6.1 Where Data Is Stored</h3>
+<ul>
+<li>Account and app data may be stored in Supabase.</li></ul>
+<ul>
+<li>Payment data is handled by RevenueCat and the relevant app store.</li></ul>
+<ul>
+<li>Reflections and progress logs may be stored on our servers if syncing is enabled.</li></ul>
+<ul>
+<li>Some data may also stay on your device through local storage.</li></ul>
+
+<h3 class="serif">6.2 Security Measures</h3>
+
+<p>We use reasonable safeguards designed to protect your information, including:</p>
+<ul>
+<li>Encryption in transit where supported</li></ul>
+<ul>
+<li>Access controls and least-privilege access for staff and systems</li></ul>
+<ul>
+<li>Row-level security and authentication controls where supported by our infrastructure</li></ul>
+<ul>
+<li>Secure password handling</li></ul>
+<ul>
+<li>Monitoring for abuse, fraud, and service issues</li></ul>
+
+<h3 class="serif">6.3 No Perfect Security</h3>
+
+<p>No system is completely secure. We cannot guarantee that unauthorized access, loss, or misuse will never happen, but we work to reduce those risks.</p>
+
+<h3 class="serif">6.4 Local-Only and Encrypted Features</h3>
+
+<p>If a feature stores data only on your device or uses stronger encryption, we will say so clearly inside the product or in a separate feature notice.</p>
+
+<hr />
+
+<h2 class="serif">7. Data Retention</h2>
+
+<p>We keep information only as long as needed for the purposes described in this Policy, unless the law requires us to keep it longer.</p>
+<ul>
+<li><strong>Account data</strong>: kept while your account is active and deleted after account deletion, except where legal retention is required</li></ul>
+<ul>
+<li>If you used Sign in with Apple and selected Apple's private relay email, we will retain the proxy email as part of your account until you delete your account or update your email in the app.</li></ul>
+<ul>
+<li>If you used Google sign-in, we will retain the Google-linked email and account metadata as part of your account until you delete your account.</li></ul>
+<ul>
+<li><strong>Reflections and notes</strong>: kept until you delete them or delete your account, unless another retention rule applies</li></ul>
+<ul>
+<li><strong>Payment records</strong>: kept as required for accounting, tax, fraud prevention, or legal compliance</li></ul>
+<ul>
+<li><strong>Health and activity data</strong>: kept only as needed for the feature you used and any connected service rules</li></ul>
+<ul>
+<li><strong>Logs and analytics data</strong>: kept in aggregated or anonymized form when possible</li></ul>
+
+<hr />
+
+<h2 class="serif">8. Cookies and Similar Technologies</h2>
+
+<p>If we offer a web version of the apps, we may use essential cookies or similar technologies for login, security, and preferences. We may also use optional analytics tools to understand app performance, but not for advertising unless we clearly say so and you can opt in where required.</p>
+
+<p>On mobile, we may use local storage or app storage instead of browser cookies.</p>
+
+<hr />
+
+<h2 class="serif">9. Your Rights</h2>
+
+<p>Depending on where you live, you may have the right to:</p>
+<ul>
+<li>Access the personal data we hold about you</li></ul>
+<ul>
+<li>Correct inaccurate information</li></ul>
+<ul>
+<li>Delete your data or account</li></ul>
+<ul>
+<li>Export your data in a portable format</li></ul>
+<ul>
+<li>Object to or opt out of certain types of processing</li></ul>
+<ul>
+<li>Withdraw consent where we rely on consent</li></ul>
+
+<h3 class="serif">9.1 How to Make a Request</h3>
+
+<p>Send privacy requests to contact@raoventures.net. Please include the email address connected to your account and what you want us to do.</p>
+
+<h3 class="serif">9.4 How to Delete Your Account</h3>
+<ul>
+<li>In-app: Open the app, go to `Settings` → `Account` → `Delete Account` and follow the prompts. Deleting your account will remove your profile, reflections, and personal content from our active systems, subject to the retention exceptions noted above.</li></ul>
+<ul>
+<li>By email: If you cannot access the in-app deletion flow, send a request to contact@raoventures.net using the email address associated with your account and include "Delete my account" in the subject. We will verify your identity before processing the request.</li></ul>
+<ul>
+<li>Important notes: Deleting your account does not automatically cancel subscriptions processed through Apple or Google — to stop recurring charges, cancel the subscription through your App Store / Google Play account or contact us for assistance. We may retain limited billing or transaction records for accounting, tax, or fraud-prevention reasons even after account deletion.</li></ul>
+
+<h3 class="serif">9.2 Texas Privacy Rights</h3>
+
+<p>If you are a Texas resident, you may have rights under the Texas Data Privacy and Security Act (TDPSA), including rights related to access, correction, deletion, portability, and certain opt-outs. If you want to use those rights, contact us at contact@raoventures.net.</p>
+
+<h3 class="serif">9.3 Appeal Process</h3>
+
+<p>If we deny your request, you can appeal by replying to our decision email within 30 days. We will review the appeal and respond within a reasonable time.</p>
+
+<hr />
+
+<h2 class="serif">10. Children's Privacy</h2>
+
+<p>Our apps are not intended for children under 13, or under the minimum age required by law in your country. We do not knowingly collect personal information from children without appropriate permission. If you believe a child has provided us information, contact us at contact@raoventures.net so we can review and delete it if required.</p>
+
+<hr />
+
+<h2 class="serif">11. International Users</h2>
+
+<p>If you use the apps from outside the United States, your information may be transferred to and processed in the United States or other countries where our service providers operate. Those countries may have different privacy laws than your own.</p>
+
+<p>If GDPR, UK GDPR, or similar laws apply to you, you may have additional rights. We will handle requests in line with the law that applies to your data.</p>
+
+<hr />
+
+<h2 class="serif">12. Third-Party Services and Links</h2>
+
+<p>The apps may link to third-party websites or services. Their privacy practices are controlled by their own policies, not ours. We recommend reviewing their policies before you share any information with them.</p>
+
+<hr />
+
+<h2 class="serif">13. AI-Generated Content & Moderation</h2>
+
+<p>We use various AI models to provide features such as:</p>
+<ul>
+<li><strong>Verse Clarification</strong>: AI-generated explanations of scripture passages to help users understand context, translation, and meaning.</li></ul>
+<ul>
+<li><strong>Suggestions</strong>: AI-generated prompts and ideas to inspire reflections, study, or spiritual practice.</li></ul>
+<ul>
+<li><strong>Content Summaries</strong>: AI-generated summaries of longer passages, articles, or user notes for quick reference.</li></ul>
+
+<p>AI-generated outputs may include text derived from user prompts, public sources, or model training data. These outputs are intended to assist and inspire and are <strong>not a substitute for professional advice, theological consultation, or official scriptural resources</strong>.</p>
+
+<p>We moderate both user-generated content and AI-generated outputs. If you encounter content that violates our policies, please report it using the in-app report tool or email contact@raoventures.net. Our moderation practices include automated filtering and human review when necessary; removed content may be retained in logs for safety and legal compliance as described in this Policy.</p>
+
+<hr />
+
+<h2 class="serif">14. Changes to This Policy</h2>
+
+<p>We may update this Policy when our apps, services, or legal obligations change. If we make a material change, we will update the date at the top of this page and may also notify you in the app or by email.</p>
+
+<hr />
+
+<h2 class="serif">15. Contact Information</h2>
+
+<p>If you have questions, requests, or complaints about this Policy, contact us at:</p>
+<ul>
+<li><strong>Privacy Email</strong>: contact@raoventures.net</li></ul>
+<ul>
+<li><strong>Mailing Address</strong>: 5900 Balcones Drive Ste 100, Austin TX 78731, USA</li></ul>
+<ul>
+<li><strong>Website</strong>: https://raoventures.net</li></ul>
+
+<hr />
+
+    </article>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="../om-symbol.svg" alt="" aria-hidden="true" />
+          Svastha
+        </div>
+        <p class="footer-tagline">Ancient wisdom for modern life. A companion for your spiritual journey.</p>
+      </div>
+
+      <div class="footer-links">
+        <h5>App</h5>
+        <ul>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../index.html#scriptures">Scripture Library</a></li>
+          <li><a href="../index.html#download">Download</a></li>
+          <li><a href="https://svastha.expo.app" target="_blank" rel="noopener">Web App</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="https://raoventures.net" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
+          <li><a href="mailto:contact@raoventures.net">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="eula.html">EULA</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Rao Ventures LLC. All rights reserved.</span>
+      <a href="https://x.com/rao_ventures" target="_blank" rel="noopener" class="social-x"
+        aria-label="Follow on X / Twitter">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.258 5.632 5.906-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+        @rao_ventures
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

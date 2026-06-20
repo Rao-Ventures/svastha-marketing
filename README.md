@@ -1,6 +1,6 @@
 # Svastha Marketing Site
 
-GitHub Pages marketing site for the [Svastha](https://svastha.expo.app) mobile app.
+GitHub Pages marketing site for mobile app Svastha - https://svastha.co.
 
 ## Structure
 
