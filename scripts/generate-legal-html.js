@@ -82,6 +82,7 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Svastha — ${title}</title>
   <meta name="description" content="Svastha is your companion for exploring Hindu scriptures, deepening spiritual practice, and cultivating a lifestyle of total wellness." />
+  <link rel="icon" type="image/png" href="../icon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
