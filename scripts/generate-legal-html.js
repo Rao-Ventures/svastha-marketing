@@ -516,7 +516,6 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
         <ul>
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
           <li><a href="terms-of-service.html">Terms of Service</a></li>
-          <li><a href="eula.html">EULA</a></li>
         </ul>
       </div>
     </div>
@@ -542,7 +541,6 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
 // Read MD files
 const privacyPolicyMd = fs.readFileSync(path.join(svasthaLegalDir, "privacy-policy.md"), "utf8");
 const termsOfServiceMd = fs.readFileSync(path.join(svasthaLegalDir, "terms-of-service.md"), "utf8");
-const eulaMd = fs.readFileSync(path.join(svasthaLegalDir, "eula.md"), "utf8");
 
 // Parse and write Privacy Policy
 const privacyHtmlContent = parseMarkdownToHtml(privacyPolicyMd);
@@ -555,9 +553,3 @@ const termsHtmlContent = parseMarkdownToHtml(termsOfServiceMd);
 const termsHtml = template("Terms of Service", termsHtmlContent);
 fs.writeFileSync(path.join(outputLegalDir, "terms-of-service.html"), termsHtml, "utf8");
 console.log("Generated legal/terms-of-service.html");
-
-// Parse and write EULA
-const eulaHtmlContent = parseMarkdownToHtml(eulaMd);
-const eulaHtml = template("EULA", eulaHtmlContent);
-fs.writeFileSync(path.join(outputLegalDir, "eula.html"), eulaHtml, "utf8");
-console.log("Generated legal/eula.html");
