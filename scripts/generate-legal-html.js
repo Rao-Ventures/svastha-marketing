@@ -54,18 +54,18 @@ function parseMarkdownToHtml(md) {
   const parsedLines = lines.map(line => {
     const trimmed = line.trim();
     if (!trimmed) return '';
-    if (trimmed.startsWith('<h') || 
-        trimmed.startsWith('<ul') || 
-        trimmed.startsWith('</ul') || 
-        trimmed.startsWith('<li') || 
-        trimmed.startsWith('</li') || 
-        trimmed.startsWith('<table') || 
-        trimmed.startsWith('</table') || 
-        trimmed.startsWith('<tr') || 
-        trimmed.startsWith('</tr') || 
-        trimmed.startsWith('<div') || 
-        trimmed.startsWith('</div') || 
-        trimmed.startsWith('<hr')) {
+    if (trimmed.startsWith('<h') ||
+      trimmed.startsWith('<ul') ||
+      trimmed.startsWith('</ul') ||
+      trimmed.startsWith('<li') ||
+      trimmed.startsWith('</li') ||
+      trimmed.startsWith('<table') ||
+      trimmed.startsWith('</table') ||
+      trimmed.startsWith('<tr') ||
+      trimmed.startsWith('</tr') ||
+      trimmed.startsWith('<div') ||
+      trimmed.startsWith('</div') ||
+      trimmed.startsWith('<hr')) {
       return line;
     }
     return `<p>${line}</p>`;
@@ -507,7 +507,7 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
         <h5>Company</h5>
         <ul>
           <li><a href="../index.html#about">About</a></li>
-          <li><a href="https://raoventures.net" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
+          <li><a href="https://svastha.co" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
           <li><a href="mailto:contact@raoventures.net">Contact</a></li>
         </ul>
       </div>
