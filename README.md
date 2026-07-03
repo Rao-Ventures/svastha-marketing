@@ -33,6 +33,20 @@ Open `index.html` directly in your browser, or serve it with any static server:
 npx serve .
 ```
 
+## Syncing Legal Documents
+
+The legal documents (Privacy Policy and Terms of Service) are generated from the markdown source files in the main `svastha` repository.
+
+To sync and generate the legal pages:
+
+1. Make sure you have the `svastha` repository cloned. By default, the generator script expects it to be located at `/Users/ying/Dev/svastha` (or you can edit `svasthaLegalDir` in `scripts/generate-legal-html.js` if it's located elsewhere).
+2. Run the generation script:
+   ```bash
+   node scripts/generate-legal-html.js
+   ```
+3. Commit and push the updated files in the `legal/` folder.
+
 ## Updating the iOS Download Link
 
 Once the app is live on the App Store, update the `href` on the `#ios-download-btn` element in `index.html` and remove the `btn-disabled` class.
+
