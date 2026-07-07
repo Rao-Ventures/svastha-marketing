@@ -172,7 +172,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 100px 24px 80px;
+      padding: 50px 24px 80px;
       text-align: center;
     }
 
@@ -188,7 +188,7 @@
     .hero-om {
       width: 80px;
       height: 80px;
-      margin: 0 auto 24px;
+      margin: 0 auto 9px;
       animation: float 6s ease-in-out infinite;
     }
 
@@ -204,21 +204,6 @@
       }
     }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--gold-pale);
-      border: 1px solid rgba(184, 134, 11, 0.25);
-      color: var(--gold-dark);
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: var(--radius-full);
-      margin-bottom: 28px;
-    }
 
     .hero h1 {
       font-family: 'EB Garamond', Georgia, serif;
@@ -299,17 +284,20 @@
       pointer-events: none;
     }
 
-    .app-store-badge {
+    .app-store-badge,
+    .play-store-badge {
       display: inline-flex;
       align-items: center;
       transition: transform var(--transition);
     }
 
-    .app-store-badge:hover {
+    .app-store-badge:hover,
+    .play-store-badge:hover {
       transform: translateY(-2px);
     }
 
-    .app-store-badge img {
+    .app-store-badge img,
+    .play-store-badge img {
       height: 48px;
       width: auto;
       display: block;
@@ -774,6 +762,10 @@
         gap: 10px;
       }
 
+      .phone-frame:last-child {
+        display: none;
+      }
+
       .phone-frame img {
         width: 140px;
         border-radius: 22px;
@@ -796,7 +788,7 @@
 
     @media (max-width: 480px) {
       .hero {
-        padding: 60px 20px 48px;
+        padding: 40px 20px 48px;
       }
 
       .phone-frame img {
@@ -849,10 +841,6 @@
 
     <img class="hero-om" src="om-symbol.svg" alt="OM symbol" />
 
-    <div class="hero-badge">
-      <span>✦</span> Now Available on iOS
-    </div>
-
     <h1 id="hero-heading">
       <em>Ancient wisdom</em><br />for your daily journey
     </h1>
@@ -867,15 +855,11 @@
         class="app-store-badge" id="hero-download-btn" aria-label="Download on the App Store">
         <img src="app-store-badge.svg" alt="Download on the App Store" />
       </a>
-      <a href="https://svastha.expo.app" class="btn-secondary" target="_blank" rel="noopener" id="hero-web-btn">
-        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" />
-          <path
-            d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-        </svg>
-        Try on Web
+      <a href="https://play.google.com/store/apps/details?id=app.svastha" target="_blank" rel="noopener"
+        class="play-store-badge" id="hero-play-download-btn" aria-label="Get it on Google Play">
+        <img src="google-play-badge.svg" alt="Get it on Google Play" />
       </a>
+
     </div>
   </section>
 
@@ -1138,17 +1122,13 @@
           <img src="app-store-badge.svg" alt="Download on the App Store" />
         </a>
 
-        <a href="https://svastha.expo.app" class="btn-secondary" target="_blank" rel="noopener" id="cta-web-btn">
-          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" />
-            <path
-              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-          </svg>
-          Try on Web
+        <!-- Google Play Download -->
+        <a href="https://play.google.com/store/apps/details?id=app.svastha" target="_blank" rel="noopener"
+          class="play-store-badge" id="android-download-btn" aria-label="Get it on Google Play">
+          <img src="google-play-badge.svg" alt="Get it on Google Play" />
         </a>
       </div>
-      <p class="platform-note fade-up">Android app coming soon · Web app available now at svastha.expo.app</p>
+      <p class="platform-note fade-up">Compatible with iOS and Android devices</p>
     </div>
   </section>
 
