@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Svastha — Ancient Wisdom for Modern Life</title>
   <meta name="description"
-    content="Svastha is your companion for exploring Hindu scriptures, deepening spiritual practice, and cultivating a lifestyle of total wellness. Study the Upanishads with AI-powered guidance." />
+    content="Svastha is your companion for exploring Hindu scriptures, deepening spiritual practice, and cultivating a lifestyle of holistic wellness. Study the Upanishads with AI-powered guidance." />
   <meta property="og:title" content="Svastha — Ancient Wisdom for Modern Life" />
   <meta property="og:description"
     content="Explore the Upanishads. Deepen your practice. Build daily wisdom habits with AI-powered scripture guidance." />
@@ -17,14 +17,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  </noscript>
 
   <style>
     /* ── Design Tokens ─────────────────────────────────────────── */
     :root {
-      --gold: #B8860B;
+      --gold: #946B00;
       --gold-light: #D4A843;
       --gold-dark: #8B6914;
       --gold-pale: #F5ECD0;
@@ -33,7 +34,7 @@
       --surface: #FFFFFF;
       --text: #2C2C2C;
       --text-sec: #6B6B6B;
-      --text-tert: #9E9E9E;
+      --text-tert: #767676;
       --border: #E8E2D6;
       --accent: #C4956A;
 
@@ -74,6 +75,7 @@
 
     img {
       max-width: 100%;
+      height: auto;
       display: block;
     }
 
@@ -569,7 +571,7 @@
       flex-shrink: 0;
     }
 
-    .scripture-info h4 {
+    .scripture-info h3 {
       font-family: 'EB Garamond', serif;
       font-size: 1.1rem;
       font-weight: 600;
@@ -678,11 +680,11 @@
     .footer-tagline {
       margin-top: 8px;
       font-size: 0.82rem;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.60);
       max-width: 240px;
     }
 
-    .footer-links h5 {
+    .footer-links h2 {
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -720,7 +722,7 @@
       flex-wrap: wrap;
       gap: 12px;
       font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.35);
+      color: rgba(255, 255, 255, 0.50);
     }
 
     .footer-bottom a {
@@ -821,7 +823,7 @@
   <nav aria-label="Main navigation">
     <div class="nav-inner">
       <a class="nav-brand" href="#" aria-label="Svastha home">
-        <img class="nav-om" src="om-symbol.svg" alt="" aria-hidden="true" />
+        <img class="nav-om" src="om-symbol.svg" alt="" aria-hidden="true" width="36" height="36" />
         Svastha
       </a>
       <ul class="nav-links">
@@ -835,11 +837,13 @@
     </div>
   </nav>
 
+  <main id="main-content">
+
   <!-- ── Hero ──────────────────────────────────────────────────── -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-bg" aria-hidden="true"></div>
 
-    <img class="hero-om" src="om-symbol.svg" alt="OM symbol" />
+    <img class="hero-om" src="om-symbol.svg" alt="OM symbol" width="80" height="80" />
 
     <h1 id="hero-heading">
       <em>Ancient wisdom</em><br />for your daily journey
@@ -847,17 +851,17 @@
 
     <p class="hero-subtitle">
       Explore the Upanishads, deepen your spiritual practice, and cultivate
-      a lifestyle of total wellness — with AI-powered guidance grounded in scripture.
+      a lifestyle of holistic wellness — with AI-powered guidance grounded in scripture.
     </p>
 
     <div class="hero-actions">
       <a href="https://apps.apple.com/us/app/svastha/id6757683477" target="_blank" rel="noopener"
         class="app-store-badge" id="hero-download-btn" aria-label="Download on the App Store">
-        <img src="app-store-badge.svg" alt="Download on the App Store" />
+        <img src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
       </a>
       <a href="https://play.google.com/store/apps/details?id=app.svastha" target="_blank" rel="noopener"
         class="play-store-badge" id="hero-play-download-btn" aria-label="Get it on Google Play">
-        <img src="google-play-badge.svg" alt="Get it on Google Play" />
+        <img src="google-play-badge.svg" alt="Get it on Google Play" width="180" height="53" />
       </a>
 
     </div>
@@ -867,20 +871,20 @@
   <div class="screenshots" aria-label="App screenshots">
     <div class="screenshots-inner">
       <div class="phone-frame fade-up">
-        <img src="screenshot-home.png" alt="Home screen showing today's verse and daily stats" loading="lazy" />
+        <img src="screenshot-home.webp" alt="Home screen showing today's verse and daily stats" fetchpriority="high" width="1320" height="2868" />
         <p class="phone-label">Home</p>
       </div>
       <div class="phone-frame fade-up" style="transition-delay:0.1s">
-        <img src="screenshot-scripture.png"
-          alt="Scripture reading view showing Sanskrit verse with transliteration and translation" loading="lazy" />
+        <img src="screenshot-scripture.webp"
+          alt="Scripture reading view showing Sanskrit verse with transliteration and translation" loading="lazy" width="1320" height="2868" />
         <p class="phone-label">Scripture</p>
       </div>
       <div class="phone-frame fade-up" style="transition-delay:0.2s">
-        <img src="screenshot-chat.png" alt="AI Chat screen with scripture-grounded guidance" loading="lazy" />
+        <img src="screenshot-chat.webp" alt="AI Chat screen with scripture-grounded guidance" loading="lazy" width="1320" height="2868" />
         <p class="phone-label">AI Chat</p>
       </div>
       <div class="phone-frame fade-up" style="transition-delay:0.3s">
-        <img src="screenshot-progress.png" alt="Progress screen showing reading streak and activity" loading="lazy" />
+        <img src="screenshot-progress.webp" alt="Progress screen showing reading streak and activity" loading="lazy" width="1320" height="2868" />
         <p class="phone-label">Progress</p>
       </div>
     </div>
@@ -993,28 +997,28 @@
         <div class="scripture-item fade-up">
           <div class="scripture-glyph" aria-hidden="true">ईश</div>
           <div class="scripture-info">
-            <h4>Isha Upanishad</h4>
+            <h3>Isha Upanishad</h3>
             <p>18 verses · One of the shortest, most profound Upanishads, revealing the nature of the Supreme.</p>
           </div>
         </div>
         <div class="scripture-item fade-up" style="transition-delay:0.08s">
           <div class="scripture-glyph" aria-hidden="true">केन</div>
           <div class="scripture-info">
-            <h4>Kena Upanishad</h4>
+            <h3>Kena Upanishad</h3>
             <p>35 verses · 4 sections. An inquiry into the nature of Brahman through dialogue and parable.</p>
           </div>
         </div>
         <div class="scripture-item fade-up" style="transition-delay:0.16s">
           <div class="scripture-glyph" aria-hidden="true">कठ</div>
           <div class="scripture-info">
-            <h4>Katha Upanishad</h4>
+            <h3>Katha Upanishad</h3>
             <p>120 verses · 6 chapters. The dialogue between Nachiketas and Yama on death and the immortal Self.</p>
           </div>
         </div>
         <div class="scripture-item fade-up" style="transition-delay:0.24s">
           <div class="scripture-glyph" aria-hidden="true">प्रश्न</div>
           <div class="scripture-info">
-            <h4>Prashna Upanishad</h4>
+            <h3>Prashna Upanishad</h3>
             <p>67 verses · 6 sections. Structured around six philosophical questions on the origin of life and
               consciousness.</p>
           </div>
@@ -1022,14 +1026,14 @@
         <div class="scripture-item fade-up" style="transition-delay:0.32s">
           <div class="scripture-glyph" aria-hidden="true">मुण्ड</div>
           <div class="scripture-info">
-            <h4>Mundaka Upanishad</h4>
+            <h3>Mundaka Upanishad</h3>
             <p>64 verses · 6 sections. Exploring higher spiritual knowledge vs lower empirical knowledge.</p>
           </div>
         </div>
         <div class="scripture-item fade-up" style="transition-delay:0.40s">
           <div class="scripture-glyph" aria-hidden="true">माण्डू</div>
           <div class="scripture-info">
-            <h4>Mandukya Upanishad</h4>
+            <h3>Mandukya Upanishad</h3>
             <p>12 verses · The shortest Upanishad, dealing with the Om syllable and the four states of consciousness.
             </p>
           </div>
@@ -1037,14 +1041,14 @@
         <div class="scripture-item fade-up" style="transition-delay:0.48s">
           <div class="scripture-glyph" aria-hidden="true">तैत्त</div>
           <div class="scripture-info">
-            <h4>Taittiriya Upanishad</h4>
+            <h3>Taittiriya Upanishad</h3>
             <p>31 verses · 3 sections. Exploring education, cosmology, and the five sheaths of the human being.</p>
           </div>
         </div>
         <div class="scripture-item fade-up" style="transition-delay:0.56s">
           <div class="scripture-glyph" aria-hidden="true" style="font-size: 1.4rem;">+</div>
           <div class="scripture-info">
-            <h4>And More</h4>
+            <h3>And More</h3>
             <p>Expanding the library to include additional spiritual texts in future releases.</p>
           </div>
         </div>
@@ -1073,7 +1077,7 @@
         </h2>
         <p class="section-subtitle fade-up" style="max-width: 100%; margin: 0 0 20px;">
           Svastha is your companion for exploring Hindu scriptures, deepening
-          spiritual practice, and cultivating a lifestyle of total wellness.
+          spiritual practice, and cultivating a lifestyle of holistic wellness.
         </p>
         <p class="section-subtitle fade-up" style="max-width: 100%; margin: 0 0 32px;">
           Study passages from the Upanishads, reflect on teachings, track your
@@ -1119,32 +1123,34 @@
         <!-- iOS Download -->
         <a href="https://apps.apple.com/us/app/svastha/id6757683477" target="_blank" rel="noopener"
           class="app-store-badge" id="ios-download-btn" aria-label="Download on the App Store">
-          <img src="app-store-badge.svg" alt="Download on the App Store" />
+          <img src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
         </a>
 
         <!-- Google Play Download -->
         <a href="https://play.google.com/store/apps/details?id=app.svastha" target="_blank" rel="noopener"
           class="play-store-badge" id="android-download-btn" aria-label="Get it on Google Play">
-          <img src="google-play-badge.svg" alt="Get it on Google Play" />
+          <img src="google-play-badge.svg" alt="Get it on Google Play" width="180" height="53" />
         </a>
       </div>
       <p class="platform-note fade-up">Compatible with iOS and Android devices</p>
     </div>
   </section>
 
+  </main>
+
   <!-- ── Footer ─────────────────────────────────────────────────── -->
   <footer>
     <div class="footer-inner">
       <div>
         <div class="footer-brand">
-          <img src="om-symbol.svg" alt="" aria-hidden="true" />
+          <img src="om-symbol.svg" alt="" aria-hidden="true" width="32" height="32" />
           Svastha
         </div>
         <p class="footer-tagline">Ancient wisdom for modern life. A companion for your spiritual journey.</p>
       </div>
 
       <div class="footer-links">
-        <h5>App</h5>
+        <h2>App</h2>
         <ul>
           <li><a href="#features">Features</a></li>
           <li><a href="#scriptures">Scripture Library</a></li>
@@ -1154,7 +1160,7 @@
       </div>
 
       <div class="footer-links">
-        <h5>Company</h5>
+        <h2>Company</h2>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="https://svastha.co/" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
@@ -1163,7 +1169,7 @@
       </div>
 
       <div class="footer-links">
-        <h5>Legal</h5>
+        <h2>Legal</h2>
         <ul>
           <li><a href="legal/privacy-policy.html">Privacy Policy</a></li>
           <li><a href="legal/terms-of-service.html">Terms of Service (EULA)</a></li>
