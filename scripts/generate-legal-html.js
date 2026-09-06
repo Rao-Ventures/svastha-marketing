@@ -508,7 +508,7 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
         <ul>
           <li><a href="../index.html#about">About</a></li>
           <li><a href="https://svastha.co" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
-          <li><a href="mailto:contact@raoventures.net">Contact</a></li>
+          <li><a href="mailto:support@raoventures.co">Contact</a></li>
         </ul>
       </div>
 
