@@ -1,7 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
-const svasthaLegalDir = "/Users/ying/Dev/svastha/docs/legal";
+const defaultSvasthaLegalDir = path.resolve(__dirname, "../../svastha/docs/legal");
+const svasthaLegalDir = fs.existsSync(defaultSvasthaLegalDir)
+  ? defaultSvasthaLegalDir
+  : "/Users/ying/Dev/svastha/docs/legal";
 const outputLegalDir = path.join(__dirname, "..", "legal");
 
 // Ensure output directory exists
@@ -27,27 +30,30 @@ function parseMarkdownToHtml(md) {
   // Simple bullet lists
   html = html.replace(/^\s*-\s+(.*?)$/gm, '<li>$1</li>');
   // Group consecutive <li> items into <ul>
-  html = html.replace(/(<li>.*?<\/li>)+/gs, (match) => {
-    return `<ul>\n${match}</ul>`;
+  html = html.replace(/((?:<li>.*?<\/li>[\r\n]*)+)/gs, (match) => {
+    return `<ul>\n${match.trim()}\n</ul>\n\n`;
   });
 
-  // Replace tables
-  html = html.replace(/^\|(.*?)\|$/gm, (match, rowContent) => {
-    const cells = rowContent.split('|').map(c => c.trim());
-    const tag = match.includes('---') ? 'th' : 'td';
-    // If it's a separator line, skip it
-    if (cells.every(c => /^:-*:$/.test(c) || /^-+$/.test(c))) {
-      return '';
+  // Replace markdown tables
+  html = html.replace(/((?:^\|.*?\|\r?\n)+)/gm, (tableBlock) => {
+    const rows = tableBlock.trim().split(/\r?\n/).map(row => {
+      const trimmed = row.replace(/^\|/, '').replace(/\|$/, '');
+      return trimmed.split('|').map(c => c.trim());
+    });
+    if (rows.length < 2) return tableBlock;
+
+    // Check if second row is separator
+    const isSeparator = rows[1].every(c => /^:?-+:?$/.test(c));
+    let thead = '';
+    let tbodyRows = rows;
+    if (isSeparator) {
+      const headerCells = rows[0].map(c => `<th>${c}</th>`).join('');
+      thead = `<thead><tr>${headerCells}</tr></thead>\n`;
+      tbodyRows = rows.slice(2);
     }
-    return `<tr>${cells.map(c => `<${tag}>${c}</${tag}>`).join('')}</tr>`;
+    const tbody = tbodyRows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('\n');
+    return `<div class="table-container"><table>\n${thead}<tbody>\n${tbody}\n</tbody>\n</table></div>\n\n`;
   });
-  // Group consecutive <tr> items into <table>
-  html = html.replace(/(<tr>.*?<\/tr>\n*)+/gs, (match) => {
-    // If there are th's, wrap first row in thead, rest in tbody
-    return `<div class="table-container"><table>\n${match}</table></div>`;
-  });
-  // Clean up any empty <table> or table elements that got doubled
-  html = html.replace(/<\/table>\n*<div class="table-container"><table>/g, '');
 
   // Wrap paragraphs (avoid wrapping tags)
   const lines = html.split('\n');
@@ -61,8 +67,16 @@ function parseMarkdownToHtml(md) {
       trimmed.startsWith('</li') ||
       trimmed.startsWith('<table') ||
       trimmed.startsWith('</table') ||
+      trimmed.startsWith('<thead') ||
+      trimmed.startsWith('</thead') ||
+      trimmed.startsWith('<tbody') ||
+      trimmed.startsWith('</tbody') ||
       trimmed.startsWith('<tr') ||
       trimmed.startsWith('</tr') ||
+      trimmed.startsWith('<th') ||
+      trimmed.startsWith('</th') ||
+      trimmed.startsWith('<td') ||
+      trimmed.startsWith('</td') ||
       trimmed.startsWith('<div') ||
       trimmed.startsWith('</div') ||
       trimmed.startsWith('<hr')) {
@@ -517,6 +531,8 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
         <ul>
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
           <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="account-deletion.html">Delete Account</a></li>
         </ul>
       </div>
     </div>
@@ -539,18 +555,22 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
 </html>
 `;
 
-// Read MD files
-const privacyPolicyMd = fs.readFileSync(path.join(svasthaLegalDir, "privacy-policy.md"), "utf8");
-const termsOfServiceMd = fs.readFileSync(path.join(svasthaLegalDir, "terms-of-service.md"), "utf8");
+const legalDocs = [
+  { file: "privacy-policy.md", title: "Privacy Policy", output: "privacy-policy.html" },
+  { file: "terms-of-service.md", title: "Terms of Service", output: "terms-of-service.html" },
+  { file: "cookie-policy.md", title: "Cookie Policy", output: "cookie-policy.html" },
+  { file: "account-deletion.md", title: "Delete Your Svastha Account", output: "account-deletion.html" },
+];
 
-// Parse and write Privacy Policy
-const privacyHtmlContent = parseMarkdownToHtml(privacyPolicyMd);
-const privacyHtml = template("Privacy Policy", privacyHtmlContent);
-fs.writeFileSync(path.join(outputLegalDir, "privacy-policy.html"), privacyHtml, "utf8");
-console.log("Generated legal/privacy-policy.html");
-
-// Parse and write Terms of Service
-const termsHtmlContent = parseMarkdownToHtml(termsOfServiceMd);
-const termsHtml = template("Terms of Service", termsHtmlContent);
-fs.writeFileSync(path.join(outputLegalDir, "terms-of-service.html"), termsHtml, "utf8");
-console.log("Generated legal/terms-of-service.html");
+for (const doc of legalDocs) {
+  const filePath = path.join(svasthaLegalDir, doc.file);
+  if (!fs.existsSync(filePath)) {
+    console.warn(`Warning: source file not found: ${filePath}`);
+    continue;
+  }
+  const mdContent = fs.readFileSync(filePath, "utf8");
+  const parsedContent = parseMarkdownToHtml(mdContent);
+  const html = template(doc.title, parsedContent);
+  fs.writeFileSync(path.join(outputLegalDir, doc.output), html, "utf8");
+  console.log(`Generated legal/${doc.output}`);
+}
