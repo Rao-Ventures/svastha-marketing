@@ -16,13 +16,18 @@
   <link rel="icon" type="image/png" href="icon.png" />
 
   <!-- iOS Smart App Banner & App Clip -->
-  <meta name="apple-itunes-app" content="app-id=6757683477, app-clip-bundle-id=app.svastha.Clip, app-clip-display=card" />
+  <meta name="apple-itunes-app"
+    content="app-id=6757683477, app-clip-bundle-id=app.svastha.Clip, app-clip-display=card" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
   </noscript>
 
   <style>
@@ -462,6 +467,12 @@
       border-radius: var(--radius-full);
     }
 
+    .feature-badge.badge-new {
+      color: #276738;
+      background: #eef7ee;
+      border-color: rgba(39, 103, 56, 0.25);
+    }
+
     /* ── Scripture Spotlight ───────────────────────────────────── */
     .spotlight {
       background: linear-gradient(135deg, #2C2415 0%, #3D3020 50%, #2C2415 100%);
@@ -580,6 +591,17 @@
       font-weight: 600;
       color: var(--text);
       margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .scripture-info .feature-badge {
+      margin-top: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      padding: 2px 8px;
     }
 
     .scripture-info p {
@@ -842,302 +864,341 @@
 
   <main id="main-content">
 
-  <!-- ── Hero ──────────────────────────────────────────────────── -->
-  <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <!-- ── Hero ──────────────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
 
-    <img class="hero-om" src="om-symbol.svg" alt="OM symbol" width="80" height="80" />
+      <img class="hero-om" src="om-symbol.svg" alt="OM symbol" width="80" height="80" />
 
-    <h1 id="hero-heading">
-      <em>Ancient wisdom</em><br />for your daily journey
-    </h1>
+      <h1 id="hero-heading">
+        <em>Ancient wisdom</em><br />for your daily journey
+      </h1>
 
-    <p class="hero-subtitle">
-      Explore the Upanishads, deepen your spiritual practice, and cultivate
-      a lifestyle of holistic wellness — with AI-powered guidance grounded in scripture.
-    </p>
-
-    <div class="hero-actions">
-      <a href="https://apps.apple.com/us/app/svastha/id6757683477" target="_blank" rel="noopener"
-        class="app-store-badge" id="hero-download-btn" aria-label="Download on the App Store">
-        <img src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=app.svastha" target="_blank" rel="noopener"
-        class="play-store-badge" id="hero-play-download-btn" aria-label="Get it on Google Play">
-        <img src="google-play-badge.svg" alt="Get it on Google Play" width="180" height="53" />
-      </a>
-
-    </div>
-  </section>
-
-  <!-- ── Screenshots ───────────────────────────────────────────── -->
-  <div class="screenshots" aria-label="App screenshots">
-    <div class="screenshots-inner">
-      <div class="phone-frame fade-up">
-        <img src="screenshot-home.webp" alt="Home screen showing today's verse and daily stats" fetchpriority="high" width="1320" height="2868" />
-        <p class="phone-label">Home</p>
-      </div>
-      <div class="phone-frame fade-up" style="transition-delay:0.1s">
-        <img src="screenshot-scripture.webp"
-          alt="Scripture reading view showing Sanskrit verse with transliteration and translation" loading="lazy" width="1320" height="2868" />
-        <p class="phone-label">Scripture</p>
-      </div>
-      <div class="phone-frame fade-up" style="transition-delay:0.2s">
-        <img src="screenshot-chat.webp" alt="AI Chat screen with scripture-grounded guidance" loading="lazy" width="1320" height="2868" />
-        <p class="phone-label">AI Chat</p>
-      </div>
-      <div class="phone-frame fade-up" style="transition-delay:0.3s">
-        <img src="screenshot-progress.webp" alt="Progress screen showing reading streak and activity" loading="lazy" width="1320" height="2868" />
-        <p class="phone-label">Progress</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Features ──────────────────────────────────────────────── -->
-  <section class="features" id="features" aria-labelledby="features-heading">
-    <div class="container">
-      <p class="section-eyebrow fade-up">Everything you need</p>
-      <h2 class="section-title fade-up" id="features-heading">
-        A complete practice,<br />in your pocket
-      </h2>
-      <p class="section-subtitle fade-up">
-        From daily verse reminders to AI-powered deep dives — Svastha meets you
-        wherever you are on your spiritual journey.
+      <p class="hero-subtitle">
+        Explore the Upanishads, deepen your spiritual practice, and cultivate
+        a lifestyle of holistic wellness — with AI-powered guidance grounded in scripture.
       </p>
 
-      <div class="features-grid">
-        <article class="feature-card fade-up">
-          <div class="feature-icon" aria-hidden="true">📖</div>
-          <h3>Sacred Scripture Library</h3>
-          <p>Read and explore the Upanishads with Sanskrit originals, transliteration, English translation, and
-            verse-by-verse commentary.</p>
-        </article>
-
-        <article class="feature-card fade-up" style="transition-delay:0.05s">
-          <div class="feature-icon" aria-hidden="true">🤖</div>
-          <h3>AI Scripture Guide</h3>
-          <p>Ask questions and receive answers grounded in actual scripture text — powered by RAG and Google Gemini, not
-            generic AI hallucinations.</p>
-          <span class="feature-badge">Premium</span>
-        </article>
-
-        <article class="feature-card fade-up" style="transition-delay:0.1s">
-          <div class="feature-icon" aria-hidden="true">🔥</div>
-          <h3>Streak Tracking</h3>
-          <p>Build a daily reading habit with streak tracking, weekly activity views, and progress summaries that keep
-            you consistent.</p>
-        </article>
-
-        <article class="feature-card fade-up" style="transition-delay:0.15s">
-          <div class="feature-icon" aria-hidden="true">📝</div>
-          <h3>Personal Reflections</h3>
-          <p>Write and revisit your own reflections on each verse — creating a private, growing journal of your
-            spiritual insights.</p>
-          <span class="feature-badge">Premium</span>
-        </article>
-
-        <article class="feature-card fade-up" style="transition-delay:0.2s">
-          <div class="feature-icon" aria-hidden="true">🔖</div>
-          <h3>Bookmarks</h3>
-          <p>Save verses that resonate with you. Revisit your personal collection of meaningful passages any time, even
-            offline.</p>
-        </article>
-
-        <article class="feature-card fade-up" style="transition-delay:0.25s">
-          <div class="feature-icon" aria-hidden="true">🌅</div>
-          <h3>Daily Verse Reminders</h3>
-          <p>Receive a personalized daily verse notification to begin each day with a moment of reflection and ancient
-            wisdom.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Scripture Spotlight ────────────────────────────────────── -->
-  <section class="spotlight" aria-labelledby="spotlight-heading">
-    <div class="container">
-      <div class="spotlight-inner">
-        <div class="spotlight-text fade-up">
-          <p class="section-eyebrow">The wisdom within</p>
-          <h2 class="section-title" id="spotlight-heading">
-            Thousands of years of insight, rediscovered daily
-          </h2>
-          <p class="section-subtitle">
-            The Upanishads — ancient dialogues between teacher and student — contain
-            timeless teachings on consciousness, the nature of reality, and the art
-            of living well. Svastha brings them to life for the modern seeker.
-          </p>
-        </div>
-        <div class="verse-card fade-up" style="transition-delay:0.15s">
-          <p class="verse-tag">Isha Upanishad · Verse 1</p>
-          <p class="verse-sanskrit">
-            ईशावास्यमिदं सर्वं यत्किञ्च जगत्यां जगत्&thinsp;।<br />
-            तेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद्धनम् ॥
-          </p>
-          <div class="verse-divider" aria-hidden="true"></div>
-          <p class="verse-translation">
-            "Everything animate or inanimate that is within the universe is
-            controlled and owned by the Lord. One should therefore accept only
-            those things necessary for himself, which are set aside as his quota,
-            and one should not accept other things, knowing well to whom they belong."
-          </p>
-          <p class="verse-source">Isha Upanishad — Verse 1</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Scripture Library ──────────────────────────────────────── -->
-  <section id="scriptures" aria-labelledby="library-heading">
-    <div class="container">
-      <p class="section-eyebrow fade-up">The library</p>
-      <h2 class="section-title fade-up" id="library-heading">Scriptures included</h2>
-      <p class="section-subtitle fade-up">
-        Begin with seven foundational Upanishads — with complete Sanskrit text, translation, and commentary.
-      </p>
-
-      <div class="library-list">
-        <div class="scripture-item fade-up">
-          <div class="scripture-glyph" aria-hidden="true">ईश</div>
-          <div class="scripture-info">
-            <h3>Isha Upanishad</h3>
-            <p>18 verses · One of the shortest, most profound Upanishads, revealing the nature of the Supreme.</p>
-          </div>
-        </div>
-        <div class="scripture-item fade-up" style="transition-delay:0.08s">
-          <div class="scripture-glyph" aria-hidden="true">केन</div>
-          <div class="scripture-info">
-            <h3>Kena Upanishad</h3>
-            <p>35 verses · 4 sections. An inquiry into the nature of Brahman through dialogue and parable.</p>
-          </div>
-        </div>
-        <div class="scripture-item fade-up" style="transition-delay:0.16s">
-          <div class="scripture-glyph" aria-hidden="true">कठ</div>
-          <div class="scripture-info">
-            <h3>Katha Upanishad</h3>
-            <p>120 verses · 6 chapters. The dialogue between Nachiketas and Yama on death and the immortal Self.</p>
-          </div>
-        </div>
-        <div class="scripture-item fade-up" style="transition-delay:0.24s">
-          <div class="scripture-glyph" aria-hidden="true">प्रश्न</div>
-          <div class="scripture-info">
-            <h3>Prashna Upanishad</h3>
-            <p>67 verses · 6 sections. Structured around six philosophical questions on the origin of life and
-              consciousness.</p>
-          </div>
-        </div>
-        <div class="scripture-item fade-up" style="transition-delay:0.32s">
-          <div class="scripture-glyph" aria-hidden="true">मुण्ड</div>
-          <div class="scripture-info">
-            <h3>Mundaka Upanishad</h3>
-            <p>64 verses · 6 sections. Exploring higher spiritual knowledge vs lower empirical knowledge.</p>
-          </div>
-        </div>
-        <div class="scripture-item fade-up" style="transition-delay:0.40s">
-          <div class="scripture-glyph" aria-hidden="true">माण्डू</div>
-          <div class="scripture-info">
-            <h3>Mandukya Upanishad</h3>
-            <p>12 verses · The shortest Upanishad, dealing with the Om syllable and the four states of consciousness.
-            </p>
-          </div>
-        </div>
-        <div class="scripture-item fade-up" style="transition-delay:0.48s">
-          <div class="scripture-glyph" aria-hidden="true">तैत्त</div>
-          <div class="scripture-info">
-            <h3>Taittiriya Upanishad</h3>
-            <p>31 verses · 3 sections. Exploring education, cosmology, and the five sheaths of the human being.</p>
-          </div>
-        </div>
-        <div class="scripture-item fade-up" style="transition-delay:0.56s">
-          <div class="scripture-glyph" aria-hidden="true" style="font-size: 1.4rem;">+</div>
-          <div class="scripture-info">
-            <h3>And More</h3>
-            <p>Expanding the library to include additional spiritual texts in future releases.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Quote ──────────────────────────────────────────────────── -->
-  <section class="quote-section" aria-labelledby="quote-heading">
-    <div class="container" style="max-width: 780px; text-align: center;">
-      <span class="quote-mark" aria-hidden="true">"</span>
-      <p class="quote-text" id="quote-heading">
-        Dedicated to bringing ancient wisdom into modern life.
-      </p>
-      <p class="quote-attr">— Rao Ventures LLC</p>
-    </div>
-  </section>
-
-  <!-- ── About ──────────────────────────────────────────────────── -->
-  <section id="about" aria-labelledby="about-heading">
-    <div class="container">
-      <div style="max-width: 680px; margin: 0 auto; text-align: center;">
-        <p class="section-eyebrow fade-up">About</p>
-        <h2 class="section-title fade-up" id="about-heading">
-          Built with care, grounded in tradition
-        </h2>
-        <p class="section-subtitle fade-up" style="max-width: 100%; margin: 0 0 20px;">
-          Svastha is your companion for exploring Hindu scriptures, deepening
-          spiritual practice, and cultivating a lifestyle of holistic wellness.
-        </p>
-        <p class="section-subtitle fade-up" style="max-width: 100%; margin: 0 0 32px;">
-          Study passages from the Upanishads, reflect on teachings, track your
-          progress, and receive personalized insights powered by AI. Every answer
-          is grounded in the actual scripture texts — not generic AI responses.
-        </p>
-        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;" class="fade-up">
-          <a href="mailto:support@raoventures.co" class="btn-secondary" id="contact-btn">
-            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-            Contact Us
-          </a>
-          <a href="https://svastha.co" class="btn-secondary" target="_blank" rel="noopener" id="website-btn">
-            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M2 12h20" />
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-            Rao Ventures
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CTA ────────────────────────────────────────────────────── -->
-  <section class="cta-section" id="download" aria-labelledby="cta-heading">
-    <div class="container">
-      <img src="om-symbol.svg" alt="" aria-hidden="true"
-        style="width:64px; margin: 0 auto 24px; animation: float 6s ease-in-out infinite;" />
-      <h2 class="section-title fade-up" id="cta-heading">
-        Begin your practice today
-      </h2>
-      <p class="section-subtitle fade-up">
-        Free to download. Explore the library immediately. Premium unlocks AI guidance and reflections.
-      </p>
-
-      <div class="cta-actions fade-up">
-        <!-- iOS Download -->
+      <div class="hero-actions">
         <a href="https://apps.apple.com/us/app/svastha/id6757683477" target="_blank" rel="noopener"
-          class="app-store-badge" id="ios-download-btn" aria-label="Download on the App Store">
+          class="app-store-badge" id="hero-download-btn" aria-label="Download on the App Store">
           <img src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
         </a>
-
-        <!-- Google Play Download -->
         <a href="https://play.google.com/store/apps/details?id=app.svastha" target="_blank" rel="noopener"
-          class="play-store-badge" id="android-download-btn" aria-label="Get it on Google Play">
+          class="play-store-badge" id="hero-play-download-btn" aria-label="Get it on Google Play">
           <img src="google-play-badge.svg" alt="Get it on Google Play" width="180" height="53" />
         </a>
+
       </div>
-      <p class="platform-note fade-up">Compatible with iOS and Android devices</p>
+    </section>
+
+    <!-- ── Screenshots ───────────────────────────────────────────── -->
+    <div class="screenshots" aria-label="App screenshots">
+      <div class="screenshots-inner">
+        <div class="phone-frame fade-up">
+          <img src="screenshot-home.webp" alt="Home screen showing today's verse and daily stats" fetchpriority="high"
+            width="1320" height="2868" />
+          <p class="phone-label">Home</p>
+        </div>
+        <div class="phone-frame fade-up" style="transition-delay:0.1s">
+          <img src="screenshot-scripture.webp"
+            alt="Scripture reading view showing Sanskrit verse with transliteration and translation" loading="lazy"
+            width="1320" height="2868" />
+          <p class="phone-label">Scripture</p>
+        </div>
+        <div class="phone-frame fade-up" style="transition-delay:0.2s">
+          <img src="screenshot-chat.webp" alt="AI Chat screen with scripture-grounded guidance" loading="lazy"
+            width="1320" height="2868" />
+          <p class="phone-label">AI Chat</p>
+        </div>
+        <div class="phone-frame fade-up" style="transition-delay:0.3s">
+          <img src="screenshot-progress.webp" alt="Progress screen showing reading streak and activity" loading="lazy"
+            width="1320" height="2868" />
+          <p class="phone-label">Progress</p>
+        </div>
+      </div>
     </div>
-  </section>
+
+    <!-- ── Features ──────────────────────────────────────────────── -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <p class="section-eyebrow fade-up">Everything you need</p>
+        <h2 class="section-title fade-up" id="features-heading">
+          A complete practice,<br />in your pocket
+        </h2>
+        <p class="section-subtitle fade-up">
+          From daily verse reminders to AI-powered deep dives — Svastha meets you
+          wherever you are on your spiritual journey.
+        </p>
+
+        <div class="features-grid">
+          <article class="feature-card fade-up">
+            <div class="feature-icon" aria-hidden="true">📖</div>
+            <h3>Sacred Scripture Library</h3>
+            <p>Read and explore foundational Upanishads with authentic Sanskrit verses, transliteration, English
+              translation, and
+              verse-by-verse commentary.</p>
+          </article>
+
+          <article class="feature-card fade-up" style="transition-delay:0.05s">
+            <div class="feature-icon" aria-hidden="true">🤖</div>
+            <h3>AI Scripture Guide</h3>
+            <p>Ask questions and receive insights strictly grounded in authentic scripture texts — powered by RAG and
+              Google Gemini, designed with privacy and consent in mind.</p>
+            <span class="feature-badge">Premium</span>
+          </article>
+
+          <article class="feature-card fade-up" style="transition-delay:0.1s">
+            <div class="feature-icon" aria-hidden="true">🔥</div>
+            <h3>Streak &amp; Habit Tracking</h3>
+            <p>Build a lasting daily reading habit with multi-week streak tracking, local caching, and activity logs to
+              keep you inspired.</p>
+          </article>
+
+          <article class="feature-card fade-up" style="transition-delay:0.15s">
+            <div class="feature-icon" aria-hidden="true">📝</div>
+            <h3>Personal Reflections</h3>
+            <p>Write private reflections for each verse or save profound insights directly from AI chats into your
+              personal spiritual journal.</p>
+            <span class="feature-badge">Premium</span>
+          </article>
+
+          <article class="feature-card fade-up" style="transition-delay:0.2s">
+            <div class="feature-icon" aria-hidden="true">🔖</div>
+            <h3>Bookmarks &amp; History</h3>
+            <p>Save verses that resonate with you, resume effortlessly with continue reading indicators, and organize
+              your favorite passages across scriptures.</p>
+          </article>
+
+          <article class="feature-card fade-up" style="transition-delay:0.25s">
+            <div class="feature-icon" aria-hidden="true">🌅</div>
+            <h3>Daily Verse Reminders</h3>
+            <p>Receive a personalized daily verse notification to begin each day centered in contemplation and timeless
+              ancient wisdom.</p>
+          </article>
+
+          <article class="feature-card fade-up" style="transition-delay:0.3s">
+            <div class="feature-icon" aria-hidden="true">🎨</div>
+            <h3>Shareable Quote Cards</h3>
+            <p>Generate and share beautifully styled visual cards featuring Sanskrit verses, translations, and personal
+              reflections with friends or on social media.</p>
+            <span class="feature-badge badge-new">New in v2</span>
+          </article>
+
+          <article class="feature-card fade-up" style="transition-delay:0.35s">
+            <div class="feature-icon" aria-hidden="true">⚡</div>
+            <h3>Instant iOS App Clip</h3>
+            <p>Experience verses and preview scriptures immediately on iOS without waiting for a full app install. Tap
+              shared links and read instantly.</p>
+            <span class="feature-badge badge-new">New in v2</span>
+          </article>
+
+          <article class="feature-card fade-up" style="transition-delay:0.4s">
+            <div class="feature-icon" aria-hidden="true">📶</div>
+            <h3>Offline Practice &amp; Sync</h3>
+            <p>Practice anywhere without disruption. Enjoy offline access to scriptures, bookmarks, and streaks with
+              automatic background synchronization.</p>
+            <span class="feature-badge badge-new">New in v2</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Scripture Spotlight ────────────────────────────────────── -->
+    <section class="spotlight" aria-labelledby="spotlight-heading">
+      <div class="container">
+        <div class="spotlight-inner">
+          <div class="spotlight-text fade-up">
+            <p class="section-eyebrow">The wisdom within</p>
+            <h2 class="section-title" id="spotlight-heading">
+              Thousands of years of insight, rediscovered daily
+            </h2>
+            <p class="section-subtitle">
+              The Upanishads — ancient dialogues between teacher and student — contain
+              timeless teachings on consciousness, the nature of reality, and the art
+              of living well. Svastha brings them to life for the modern seeker.
+            </p>
+          </div>
+          <div class="verse-card fade-up" style="transition-delay:0.15s">
+            <p class="verse-tag">Isha Upanishad · Verse 1</p>
+            <p class="verse-sanskrit">
+              ईशावास्यमिदं सर्वं यत्किञ्च जगत्यां जगत्&thinsp;।<br />
+              तेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद्धनम् ॥
+            </p>
+            <div class="verse-divider" aria-hidden="true"></div>
+            <p class="verse-translation">
+              "Everything animate or inanimate that is within the universe is
+              controlled and owned by the Lord. One should therefore accept only
+              those things necessary for himself, which are set aside as his quota,
+              and one should not accept other things, knowing well to whom they belong."
+            </p>
+            <p class="verse-source">Isha Upanishad — Verse 1</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Scripture Library ──────────────────────────────────────── -->
+    <section id="scriptures" aria-labelledby="library-heading">
+      <div class="container">
+        <p class="section-eyebrow fade-up">The library</p>
+        <h2 class="section-title fade-up" id="library-heading">Scriptures included</h2>
+        <p class="section-subtitle fade-up">
+          Begin with eight foundational Upanishads — with complete Sanskrit text, translation, and commentary.
+        </p>
+
+        <div class="library-list">
+          <div class="scripture-item fade-up">
+            <div class="scripture-glyph" aria-hidden="true">ईश</div>
+            <div class="scripture-info">
+              <h3>Isha Upanishad</h3>
+              <p>18 verses · One of the shortest, most profound Upanishads, revealing the nature of the Supreme.</p>
+            </div>
+          </div>
+          <div class="scripture-item fade-up" style="transition-delay:0.08s">
+            <div class="scripture-glyph" aria-hidden="true">केन</div>
+            <div class="scripture-info">
+              <h3>Kena Upanishad</h3>
+              <p>35 verses · 4 sections. An inquiry into the nature of Brahman through dialogue and parable.</p>
+            </div>
+          </div>
+          <div class="scripture-item fade-up" style="transition-delay:0.16s">
+            <div class="scripture-glyph" aria-hidden="true">कठ</div>
+            <div class="scripture-info">
+              <h3>Katha Upanishad</h3>
+              <p>120 verses · 6 chapters. The dialogue between Nachiketas and Yama on death and the immortal Self.</p>
+            </div>
+          </div>
+          <div class="scripture-item fade-up" style="transition-delay:0.24s">
+            <div class="scripture-glyph" aria-hidden="true">प्रश्न</div>
+            <div class="scripture-info">
+              <h3>Prashna Upanishad</h3>
+              <p>67 verses · 6 sections. Structured around six philosophical questions on the origin of life and
+                consciousness.</p>
+            </div>
+          </div>
+          <div class="scripture-item fade-up" style="transition-delay:0.32s">
+            <div class="scripture-glyph" aria-hidden="true">मुण्ड</div>
+            <div class="scripture-info">
+              <h3>Mundaka Upanishad</h3>
+              <p>64 verses · 6 sections. Exploring higher spiritual knowledge vs lower empirical knowledge.</p>
+            </div>
+          </div>
+          <div class="scripture-item fade-up" style="transition-delay:0.40s">
+            <div class="scripture-glyph" aria-hidden="true">माण्डू</div>
+            <div class="scripture-info">
+              <h3>Mandukya Upanishad</h3>
+              <p>12 verses · The shortest Upanishad, dealing with the Om syllable and the four states of consciousness.
+              </p>
+            </div>
+          </div>
+          <div class="scripture-item fade-up" style="transition-delay:0.48s">
+            <div class="scripture-glyph" aria-hidden="true">तैत्त</div>
+            <div class="scripture-info">
+              <h3>Taittiriya Upanishad</h3>
+              <p>31 verses · 3 sections. Exploring education, cosmology, and the five sheaths of the human being.</p>
+            </div>
+          </div>
+          <div class="scripture-item fade-up" style="transition-delay:0.56s">
+            <div class="scripture-glyph" aria-hidden="true">कैव</div>
+            <div class="scripture-info">
+              <h3>Kaivalya Upanishad <span class="feature-badge badge-new">New in v2</span></h3>
+              <p>24 verses · A dialogue between Ashvalayana and Brahma on meditation, renunciation, and realizing the
+                nondual Self.</p>
+            </div>
+          </div>
+          <div class="scripture-item fade-up" style="transition-delay:0.64s">
+            <div class="scripture-glyph" aria-hidden="true" style="font-size: 1.4rem;">+</div>
+            <div class="scripture-info">
+              <h3>And More</h3>
+              <p>Expanding the library to include additional spiritual texts in upcoming releases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Quote ──────────────────────────────────────────────────── -->
+    <section class="quote-section" aria-labelledby="quote-heading">
+      <div class="container" style="max-width: 780px; text-align: center;">
+        <span class="quote-mark" aria-hidden="true">"</span>
+        <p class="quote-text" id="quote-heading">
+          Dedicated to bringing ancient wisdom into modern life.
+        </p>
+        <p class="quote-attr">— Rao Ventures LLC</p>
+      </div>
+    </section>
+
+    <!-- ── About ──────────────────────────────────────────────────── -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div style="max-width: 680px; margin: 0 auto; text-align: center;">
+          <p class="section-eyebrow fade-up">About</p>
+          <h2 class="section-title fade-up" id="about-heading">
+            Built with care, grounded in tradition
+          </h2>
+          <p class="section-subtitle fade-up" style="max-width: 100%; margin: 0 0 20px;">
+            Svastha is your companion for exploring Hindu scriptures, deepening
+            spiritual practice, and cultivating a lifestyle of holistic wellness.
+          </p>
+          <p class="section-subtitle fade-up" style="max-width: 100%; margin: 0 0 32px;">
+            Study passages from the Upanishads, reflect on teachings, track your
+            progress, and receive personalized insights powered by AI. Every answer
+            is grounded in the actual scripture texts — not generic AI responses.
+          </p>
+          <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;" class="fade-up">
+            <a href="mailto:support@raoventures.co" class="btn-secondary" id="contact-btn">
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Contact Us
+            </a>
+            <a href="https://svastha.co" class="btn-secondary" target="_blank" rel="noopener" id="website-btn">
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              Rao Ventures
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ────────────────────────────────────────────────────── -->
+    <section class="cta-section" id="download" aria-labelledby="cta-heading">
+      <div class="container">
+        <img src="om-symbol.svg" alt="" aria-hidden="true"
+          style="width:64px; margin: 0 auto 24px; animation: float 6s ease-in-out infinite;" />
+        <h2 class="section-title fade-up" id="cta-heading">
+          Begin your practice today
+        </h2>
+        <p class="section-subtitle fade-up">
+          Free to download. Explore the library immediately. Premium unlocks AI guidance and reflections.
+        </p>
+
+        <div class="cta-actions fade-up">
+          <!-- iOS Download -->
+          <a href="https://apps.apple.com/us/app/svastha/id6757683477" target="_blank" rel="noopener"
+            class="app-store-badge" id="ios-download-btn" aria-label="Download on the App Store">
+            <img src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
+          </a>
+
+          <!-- Google Play Download -->
+          <a href="https://play.google.com/store/apps/details?id=app.svastha" target="_blank" rel="noopener"
+            class="play-store-badge" id="android-download-btn" aria-label="Get it on Google Play">
+            <img src="google-play-badge.svg" alt="Get it on Google Play" width="180" height="53" />
+          </a>
+        </div>
+        <p class="platform-note fade-up">Compatible with iOS and Android devices</p>
+      </div>
+    </section>
 
   </main>
 

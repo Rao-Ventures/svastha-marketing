@@ -1,0 +1,16 @@
+{
+  "appclips": {
+    "apps": [
+      "M5WUBNCZ9N.app.svastha.Clip"
+    ]
+  },
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "M5WUBNCZ9N.app.svastha",
+        "paths": ["*", "/verse/*"]
+      }
+    ]
+  }
+}
