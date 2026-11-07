@@ -9,8 +9,16 @@
     "details": [
       {
         "appID": "M5WUBNCZ9N.app.svastha",
-        "paths": ["*", "/verse/*"]
+        "paths": [
+          "*",
+          "/verse/*"
+        ]
       }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "M5WUBNCZ9N.app.svastha"
     ]
   }
 }
