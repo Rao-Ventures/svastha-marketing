@@ -513,7 +513,6 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
           <li><a href="../index.html#features">Features</a></li>
           <li><a href="../index.html#scriptures">Scripture Library</a></li>
           <li><a href="../index.html#download">Download</a></li>
-          <li><a href="https://svastha.expo.app" target="_blank" rel="noopener">Web App</a></li>
         </ul>
       </div>
 
