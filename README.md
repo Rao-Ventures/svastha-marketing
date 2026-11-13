@@ -35,16 +35,17 @@ npx serve .
 
 ## Syncing Legal Documents
 
-The legal documents (Privacy Policy and Terms of Service) are generated from the markdown source files in the main `svastha` repository.
+The Privacy Policy, Terms of Service, and Cookie and App Storage Policy are generated from Markdown in the sibling `svastha/docs/legal` directory. Account-deletion instructions are included in the Privacy Policy.
 
 To sync and generate the legal pages:
 
-1. Make sure you have the `svastha` repository cloned. By default, the generator script expects it to be located at `/Users/ying/Dev/svastha` (or you can edit `svasthaLegalDir` in `scripts/generate-legal-html.js` if it's located elsewhere).
+1. Make sure the `svastha` repository is cloned beside this repository and contains the intended release's legal sources. The generator falls back to `/Users/ying/Dev/svastha/docs/legal` if the sibling directory is unavailable.
 2. Run the generation script:
    ```bash
    node scripts/generate-legal-html.js
    ```
-3. Commit and push the updated files in the `legal/` folder.
+3. Review all three generated pages in `legal/`, including links and update dates. Edit Markdown sources or the generator rather than generated HTML.
+4. Commit and push the updated sources and generated pages when ready to deploy.
 
 ## Updating the iOS Download Link
 

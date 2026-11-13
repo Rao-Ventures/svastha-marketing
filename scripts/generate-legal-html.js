@@ -26,6 +26,9 @@ function parseMarkdownToHtml(md) {
   // Replace bold
   html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
+  // Render the source documents' links to platform subscription policies.
+  html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2">$1</a>');
+
   // Replace lists
   // Simple bullet lists
   html = html.replace(/^\s*-\s+(.*?)$/gm, '<li>$1</li>');
@@ -296,6 +299,12 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
       color: var(--text);
     }
 
+    .legal-content a {
+      color: var(--gold-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .legal-content hr {
       border: 0;
       height: 1px;
@@ -510,6 +519,7 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
       <div class="footer-links">
         <h5>App</h5>
         <ul>
+          <li><a href="../index.html#about">About</a></li>
           <li><a href="../index.html#features">Features</a></li>
           <li><a href="../index.html#scriptures">Scripture Library</a></li>
           <li><a href="../index.html#download">Download</a></li>
@@ -519,8 +529,7 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
       <div class="footer-links">
         <h5>Company</h5>
         <ul>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="https://svastha.co" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
+          <li><a href="https://raoventures.co" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
           <li><a href="mailto:support@raoventures.co">Contact</a></li>
         </ul>
       </div>
@@ -531,7 +540,6 @@ const template = (title, contentHtml) => `<!DOCTYPE html>
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
           <li><a href="terms-of-service.html">Terms of Service</a></li>
           <li><a href="cookie-policy.html">Cookie Policy</a></li>
-          <li><a href="account-deletion.html">Delete Account</a></li>
         </ul>
       </div>
     </div>
@@ -558,7 +566,6 @@ const legalDocs = [
   { file: "privacy-policy.md", title: "Privacy Policy", output: "privacy-policy.html" },
   { file: "terms-of-service.md", title: "Terms of Service", output: "terms-of-service.html" },
   { file: "cookie-policy.md", title: "Cookie Policy", output: "cookie-policy.html" },
-  { file: "account-deletion.md", title: "Delete Your Svastha Account", output: "account-deletion.html" },
 ];
 
 for (const doc of legalDocs) {

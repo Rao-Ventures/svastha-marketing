@@ -206,6 +206,12 @@
       color: var(--text);
     }
 
+    .legal-content a {
+      color: var(--gold-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .legal-content hr {
       border: 0;
       height: 1px;
@@ -406,103 +412,73 @@
 
 <p><strong>Effective Date</strong>: June 15, 2026</p>
 
-<p><strong>Last Updated</strong>: November 1, 2026</p>
+<p><strong>Last Updated</strong>: November 12, 2026</p>
 
 <p><strong>Company</strong>: Rao Ventures LLC</p>
 
 <p><strong>Privacy Contact</strong>: support@raoventures.co</p>
 
-<h2 class="serif">1. Scope and Information We Collect</h2>
+<h2 class="serif">1. Information and Use</h2>
 
-<p>This notice explains how Rao Ventures LLC handles personal information in the US version of Svastha, including its mobile app, App Clip, and web app.</p>
+<p>This policy covers Svastha's US mobile app and App Clip.</p>
 
-<p>We collect:</p>
-<ul>
-<li><strong>Account information</strong>: name, email, sign-in details, and preferences. Apple or Google may provide profile information when you choose their sign-in service. Apple may provide a private relay email. Our authentication provider handles passwords securely.</li>
-<li><strong>App content and activity</strong>: reflections, bookmarks, reading history, progress, and reminder preferences.</li>
-<li><strong>AI information</strong>: questions and recent chat context you choose to send, your AI-sharing permission, and reports you submit.</li>
-<li><strong>Purchase information</strong>: account and transaction identifiers, purchase dates, plan, and subscription status. Apple or Google processes payments; we do not receive payment card details.</li>
-<li><strong>Device and usage information</strong>: device and session identifiers, operating system, app version, IP address, approximate location, screens visited, interactions, and diagnostic information. Analytics run automatically and some events are linked to your account.</li>
-<li><strong>Support information</strong>: messages and information you provide when contacting us.</li>
-</ul>
+<p>We process account and contact details; reflections, bookmarks, reading progress, and reminder preferences; optional AI requests, permissions, and reports; purchase and subscription records; and support messages. Apple and Google process payments; we do not receive payment card details.</p>
 
-<p>Your reflections, questions, and activity may reveal religious beliefs or health-related information. Providing private content and using AI are optional.</p>
+<p>We also process device and session identifiers, operating system, app version, IP address, approximate location, interactions, and diagnostics. Installation and preview timing are stored locally to manage preview access and reminders.</p>
 
-<h2 class="serif">2. How We Use Information</h2>
+<p>We use this information to provide features, manage accounts and subscriptions, deliver requested reminders, respond to support, improve reliability, protect security, and meet legal obligations.</p>
 
-<p>We use information to provide and synchronize app features, manage accounts and subscriptions, respond to support and reports, send requested reminders and service notices, improve reliability, prevent abuse, and meet legal obligations.</p>
+<p>Your content may reveal religious beliefs or health information. Providing this content and using AI are optional. We use sensitive information for requested features, submitted reports, security, and legal obligations, obtaining consent where required. We do not use private reflections or AI conversations for advertising or to train our own general-purpose AI models.</p>
 
-<p>We use sensitive content to provide requested features, review submitted reports, protect security, and meet legal obligations. We do not use private reflections or AI conversations for advertising or to train our own general-purpose AI models.</p>
+<h2 class="serif">2. Sharing and Optional AI</h2>
 
-<p>We do not sell personal information, share it for cross-context behavioral advertising, use it for targeted advertising, or profile users for decisions with legal or similarly significant effects.</p>
+<p><strong>Supabase</strong> processes accounts, saved content, and app requests. <strong>Apple and Google</strong> handle optional sign-in; they and <strong>RevenueCat</strong> process purchase and subscription information. <strong>Expo</strong> processes connection information for hosting and distribution.</p>
 
-<h2 class="serif">3. Who Receives Information</h2>
+<p><strong>Vexo Analytics</strong> automatically receives device, session, usage, preview-notice, purchase-screen, and diagnostic information in production on supported physical devices. Our custom events exclude account identifiers and private content. Browser cookie controls may not stop app analytics.</p>
 
-<p>We use the following providers as needed to deliver Svastha:</p>
+<p>With your permission, OpenAI receives your question for scripture search. Google Gemini receives your question, up to six previous chat messages, and selected scripture passages to generate an answer. You can decline permission in Chat or withdraw it in Profile > Settings > Withdraw AI permission; withdrawal stops future requests but does not recall information already processed.</p>
 
-<div class="table-container"><table>
-<thead><tr><th>Provider</th><th>Purpose and information received</th></tr></thead>
-<tbody>
-<tr><td><strong>Supabase</strong></td><td>Account access, saved app content, and processing app requests</td></tr>
-<tr><td><strong>Apple, Google, and RevenueCat</strong></td><td>Sign-in where selected, purchases, and subscription management, including account and transaction information</td></tr>
-<tr><td><strong>OpenAI and Google Gemini</strong></td><td>Optional AI processing, described below</td></tr>
-<tr><td><strong>Vexo Analytics</strong></td><td>Device, usage, subscription, and diagnostic information, including account identifiers on some events</td></tr>
-<tr><td><strong>Expo</strong></td><td>App hosting and distribution, including service connection information</td></tr>
-</tbody>
-</table></div>
+<p>Reporting an AI answer sends the text you review, your selected reason, account ID, and submission time to us. Other chat messages are not attached.</p>
 
+<p>Providers may process information in the United States or other countries under their applicable terms and agreements. We may also disclose information to meet legal obligations, protect rights and security, or complete a business transfer with required protections and notice.</p>
 
-<p>We may also disclose information to comply with law, protect rights and security, or complete a business transfer with legally required protections and notice. Providers process information under applicable agreements; app stores and sign-in services also have their own privacy policies. Information may be processed in the United States or other countries where providers operate.</p>
+<p>We do not sell personal information, share it for cross-context behavioral advertising, use targeted advertising, or conduct profiling with legal or similarly significant effects.</p>
 
-<h2 class="serif">4. Optional AI and Reports</h2>
+<h2 class="serif">3. Retention and Security</h2>
 
-<p>Before using AI, you are asked to permit sharing your question with <strong>OpenAI</strong> for scripture search, and your question, up to six previous chat messages, and selected scripture passages with <strong>Google Gemini</strong> for an answer. These providers receive the submitted text. Their retention and use are governed by the applicable service terms and agreements.</p>
+<p>We retain accounts and saved content until deletion or while needed to provide the service, subject to lawful retention exceptions. AI reports are removed after 30 days or account deletion. AI permission records remain until withdrawal or account deletion. The app does not store persistent AI chat history; providers' retention follows their applicable terms.</p>
 
-<p>You can decline or withdraw permission in Chat. Withdrawal stops future requests but does not recall information already processed. AI answers may be inaccurate and are not professional advice.</p>
+<p>Local preview information may remain after sign-out or account deletion until app data is cleared; backups may restore it. Limited billing, support, diagnostic, and backup records may remain as needed for accounting, security, disputes, or legal obligations. Local copies on other devices are not immediately erased.</p>
 
-<p>To report an answer, tap <strong>Report answer</strong>, review and edit the included text, and select a reason to send it. We receive that text, the reason, your account ID, and submission time for review. Other chat messages are not attached.</p>
+<p>We use secure transmission and access controls. No system is completely secure.</p>
 
-<h2 class="serif">5. Security and Retention</h2>
+<h2 class="serif">4. Account Deletion</h2>
 
-<p>We use safeguards such as secure transmission and access controls to protect personal information. No system is completely secure.</p>
-<ul>
-<li><strong>Accounts and saved content</strong>: retained while needed to provide the service, until you delete the content or account, subject to lawful retention exceptions.</li>
-<li><strong>AI chats</strong>: the app does not save a persistent conversation history. Providers process submitted messages as described above.</li>
-<li><strong>AI reports</strong>: removed after 30 days through daily cleanup, or when you delete your account.</li>
-<li><strong>AI permission</strong>: retained until withdrawn or the account is deleted.</li>
-<li><strong>Billing, support, and diagnostic records</strong>: retained as needed for their stated purposes, including accounting, security, dispute handling, and legal requirements.</li>
-</ul>
+<p>Open <strong>Profile > Delete Account</strong>. After preview expiry, use <strong>Account & settings</strong> to reach Profile. No subscription purchase or cancellation is required first.</p>
 
-<p>Deletion removes account content from our active systems. Backups and provider records may follow separate deletion schedules; limited records may be retained for legitimate legal, accounting, or security needs. Local copies on other devices are not immediately erased. Contact us about retention or deletion relevant to your data.</p>
+<p>Without the app, email <strong>support@raoventures.co</strong> with the subject <strong>Delete my Svastha account</strong>, preferably from your account email. No reinstall or new account is required. We verify identity; Apple-linked accounts may require reauthentication. Contact us if you need another verification method.</p>
 
-<h2 class="serif">6. Your Choices and Rights</h2>
+<p>Deletion permanently removes your account, reflections, bookmarks, reading progress, streaks, AI permissions, and AI reports from active systems. In-app deletion also cancels reminders and clears their preferences on that device. Limited records, backups, provider records, and local preview timing may remain as described in Section 3. We respond within applicable legal deadlines.</p>
 
-<p>You can change reminders and preferences in Profile, withdraw AI permission in Chat, and delete your account through <strong>Profile > Delete Account</strong>. If you cannot use the app, email support@raoventures.co with <strong>Delete my Svastha account</strong> in the subject. We may verify your identity; Apple-linked accounts may require reauthentication. You do not need to reinstall the app to request deletion.</p>
+<p><strong>Account deletion and uninstalling do not cancel app-store subscriptions.</strong> Cancel separately through the Apple or Google account used to purchase to stop renewal charges.</p>
 
-<p><strong>Account deletion and uninstalling do not cancel subscriptions.</strong> Cancel separately through the Apple or Google account used to purchase. Cancellation is not required before requesting deletion.</p>
+<h2 class="serif">5. Your Choices and Rights</h2>
 
-<p>Depending on applicable state law, you may have rights to access, correct, delete, or obtain a portable copy of information; limit certain sensitive-information uses; opt out of sale, sharing, targeted advertising, or certain profiling; and appeal a denied request. We do not discriminate unlawfully for exercising these rights. Authorized agents may submit requests where permitted, subject to verification.</p>
+<p>Manage reminders in Profile and withdraw AI permission in <strong>Profile > Settings > Withdraw AI permission</strong>.</p>
 
-<p>Submit requests by email to support@raoventures.co, by phone at +1 (737) 434-0575, or by mail below. Provide your account email where relevant, but do not send passwords or private reflections. We respond within applicable legal deadlines and explain any permitted extension or denial.</p>
+<p>Depending on applicable law, you may request access, correction, deletion, or a portable copy of your information; limit sensitive-information use; opt out of sale, targeted advertising, sharing, or certain profiling; and appeal a denied request. We do not discriminate unlawfully for exercising these rights. Authorized agents may act where permitted, subject to verification.</p>
 
-<p>Our Cookie and App Storage Policy explains browser and device storage. Browser controls may limit storage but may not stop app analytics. Contact us about privacy requests.</p>
+<p>Submit requests or appeals using the contact details below. We may verify identity and respond within applicable legal deadlines, explaining extensions, denials, and available appeal or regulatory complaint options. Do not send passwords or private reflections.</p>
 
-<h2 class="serif">7. Children's Privacy</h2>
+<h2 class="serif">6. Children and Updates</h2>
 
-<p>Svastha is intended for adults at least 18 who have reached the age of majority. It is not directed to children. If you believe a child has provided personal information, contact us so we can investigate and remove it as required.</p>
+<p>Svastha is for adults aged 18 or older who have reached the age of majority. Contact us if you believe a child provided personal information.</p>
 
-<h2 class="serif">8. Changes</h2>
+<p>We update this policy when practices change and provide notice or obtain consent where legally required.</p>
 
-<p>We will update this notice when practices change and provide legally required notice. Where consent is required, we will obtain it before the relevant processing; continued use alone does not replace consent.</p>
+<h2 class="serif">7. Contact</h2>
 
-<h2 class="serif">9. Contact</h2>
-<ul>
-<li><strong>Privacy Email</strong>: support@raoventures.co</li>
-<li><strong>Phone</strong>: +1 (737) 434-0575</li>
-<li><strong>Mailing Address</strong>: 5900 Balcones Drive Ste 100, Austin TX 78731, USA</li>
-<li><strong>Website</strong>: https://svastha.co</li>
-</ul>
-
+<p>Email <strong>support@raoventures.co</strong>, call <strong>+1 (737) 434-0575</strong>, or write to <strong>Rao Ventures LLC, 5900 Balcones Drive Ste 100, Austin TX 78731, USA</strong>.</p>
 
     </article>
   </main>
@@ -521,18 +497,17 @@
       <div class="footer-links">
         <h5>App</h5>
         <ul>
+          <li><a href="../index.html#about">About</a></li>
           <li><a href="../index.html#features">Features</a></li>
           <li><a href="../index.html#scriptures">Scripture Library</a></li>
           <li><a href="../index.html#download">Download</a></li>
-          <li><a href="https://svastha.expo.app" target="_blank" rel="noopener">Web App</a></li>
         </ul>
       </div>
 
       <div class="footer-links">
         <h5>Company</h5>
         <ul>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="https://svastha.co" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
+          <li><a href="https://raoventures.co" target="_blank" rel="noopener">Rao Ventures LLC</a></li>
           <li><a href="mailto:support@raoventures.co">Contact</a></li>
         </ul>
       </div>
@@ -543,7 +518,6 @@
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
           <li><a href="terms-of-service.html">Terms of Service</a></li>
           <li><a href="cookie-policy.html">Cookie Policy</a></li>
-          <li><a href="account-deletion.html">Delete Account</a></li>
         </ul>
       </div>
     </div>
